@@ -116,6 +116,7 @@ TCRdistCalculator::TCRdistCalculator(
 	// load the data
 	string const filename( misc::dbdir+"tcrdist_info_both_chains.txt" );
 	ifstream data( filename.c_str() );
+	check_file( data, filename );
 
 	// read the aa distance matrix
 	AA_dist_matrix_.resize(26);
@@ -215,6 +216,7 @@ TCRdistCalculator::TCRdistCalculator(
 		runtime_assert( fabs( gap_penalty_cdr3_region_-12 ) < 1e-3 );
 		string const filename( misc::dbdir+"tcrdist_cdf_randpubtcrs_v1_cdr3_gap_penalty_12_ge_5_subjects.txt" );
 		ifstream data( filename.c_str() );
+		check_file( data, filename );
 		string line, tmp;
 		vector<Size> totals;
 		Size newtotal(0), idist, count, total;
