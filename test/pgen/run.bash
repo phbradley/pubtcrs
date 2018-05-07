@@ -8,12 +8,8 @@ echo $cmd "> test_output.txt"
 $cmd > test_output.txt
 
 echo
-echo "Comparing output to expected output..."
+echo "Comparing output to expected output (this command should produce no output):"
 cmd="diff expected_output.txt test_output.txt"
 echo
 echo $cmd
 $cmd
-
-echo
-echo "Did that last command generate any big differences in pvalues?"
-echo "(No output means diff didn't find any differences)"
