@@ -1,0 +1,187 @@
+read_fasta: TRBV6-4*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV14*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV14*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-4*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-5*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-3*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV3-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV3-2*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV3-2*03 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-3*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-3*03 info: num_cdr3_nucleotides:3 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-3*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-3*04 info: num_cdr3_nucleotides:3 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV29-1*01 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV29-1*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV29-1*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*01 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV25-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV27*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-1*02 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-3*02 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-8*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV26*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-3*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV16*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV16*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV16*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV12-4*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV12-4*02 info: num_cdr3_nucleotides:15 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-4*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-4*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-4*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV12-3*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-6*05 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-6*04 info: num_cdr3_nucleotides:15 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-6*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-6*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-6*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV3-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV18*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV3-1*02 info: num_cdr3_nucleotides:9 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*03 info: num_cdr3_nucleotides:9 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*02 info: num_cdr3_nucleotides:9 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-1*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*07 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*06 info: num_cdr3_nucleotides:9 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*05 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20-1*04 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV29/OR9-2*02 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV29/OR9-2*01 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV23-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV24-1*01 info: num_cdr3_nucleotides:18 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV12-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-2*04 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-8*03 info: num_cdr3_nucleotides:15 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-2*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-2*03 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-1*02 info: num_cdr3_nucleotides:9 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-8*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-4*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV2*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV2*03 info: num_cdr3_nucleotides:15 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV24/OR9-2*01 info: num_cdr3_nucleotides:18 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-8*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-6*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV15*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV15*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV15*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-4*04 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV13*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV13*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-2*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-2*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-8*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV26/OR9-2*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV26/OR9-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV12-5*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV23/OR9-2*01 info: num_cdr3_nucleotides:3 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV23/OR9-2*02 info: num_cdr3_nucleotides:0 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-6*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-6*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-5*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-5*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-5*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*05 info: num_cdr3_nucleotides:15 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*04 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*07 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*06 info: num_cdr3_nucleotides:15 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-9*03 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-2*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV17*01 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV21-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-9*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-3*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-3*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV28*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-3*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV4-3*04 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-3*05 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-3*04 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-3*03 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-3*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-3*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV1*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-7*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-7*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV12-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV7-8*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-1*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV30*02 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV30*01 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV30*04 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV30*05 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV9*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV9*02 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV9*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-2*02 info: num_cdr3_nucleotides:0 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV6-7*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV19*03 info: num_cdr3_nucleotides:11 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV19*02 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV19*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-3*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-3*03 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV11-3*02 info: num_cdr3_nucleotides:12 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20/OR9-2*01 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20/OR9-2*03 info: num_cdr3_nucleotides:14 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV20/OR9-2*02 info: num_cdr3_nucleotides:9 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV10-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV21/OR9-2*01 info: num_cdr3_nucleotides:17 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBV5-7*01 info: num_cdr3_nucleotides:16 ../../db/human_V_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-3*01 info: num_cdr3_nucleotides:21 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-1*01 info: num_cdr3_nucleotides:20 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-5*01 info: num_cdr3_nucleotides:20 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-4*01 info: num_cdr3_nucleotides:23 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-2P*01 info: num_cdr3_nucleotides:18 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-2*01 info: num_cdr3_nucleotides:23 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-4*01 info: num_cdr3_nucleotides:22 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-7*01 info: num_cdr3_nucleotides:19 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-5*01 info: num_cdr3_nucleotides:22 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-2*01 info: num_cdr3_nucleotides:20 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-6*02 info: num_cdr3_nucleotides:25 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-7*02 info: num_cdr3_nucleotides:19 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-6*01 info: num_cdr3_nucleotides:25 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ2-1*01 info: num_cdr3_nucleotides:22 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-3*01 info: num_cdr3_nucleotides:22 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBJ1-6*01 info: num_cdr3_nucleotides:25 ../../db/human_J_nucleotide_sequences_with_info.fasta
+read_fasta: TRBD1*01 ../../db/human_D_nucleotide_sequences.fasta
+read_fasta: TRBD2*01 ../../db/human_D_nucleotide_sequences.fasta
+read_fasta: TRBD2*02 ../../db/human_D_nucleotide_sequences.fasta
+JunctionCounts::read_probs_and_counts_from_file: ../../db/tmp.junction_stats_full_new.log.probs_adjusted_adjusted_adjusted_adjusted_adjusted
+pgen: 4.79863e-10 tcr: V12,CASSWDREGSYEQYF
+pgen: 1.06608e-10 tcr: V05,CASSERGSTQETQYF
+pgen: 4.29381e-10 tcr: V05,CASSLEGADGNTIYF
+pgen: 3.66498e-10 tcr: V02,CASSDGTTNQPQHF
+pgen: 1.17958e-09 tcr: V19,CASSMQRGTDTQYF
+pgen: 1.5492e-11 tcr: V28,CASLGHFNSPLHF
+pgen: 1.01443e-09 tcr: V20,CSARDGTGGYQPQHF
+pgen: 7.77445e-11 tcr: V06,CASSPQGAVGYGYTF
+pgen: 2.20279e-11 tcr: V09,CASSPIVAGTDTQYF
+pgen: 1.9206e-09 tcr: V20,CSSTSGNTIYF
+pgen: 3.69594e-09 tcr: V07,CASSSMTTDTQYF
+pgen: 4.95364e-11 tcr: V24,CATSETGTGAAGELFF
+pgen: 1.94017e-10 tcr: V28,CASSLGYGGEETQYF
+pgen: 3.14981e-09 tcr: V14,CASSPIRSYEQYF
+pgen: 2.37119e-09 tcr: V04,CASSQPGSSYNSPLHF
+pgen: 9.60521e-10 tcr: V05,CASSLDYAETQYF
+pgen: 3.13596e-09 tcr: V09,CASSVVGGQGNTEAFF
+pgen: 9.40848e-11 tcr: V30,CAWSVVTGGSGYTF
+pgen: 3.82412e-10 tcr: V12,CASGSTALNTEAFF
+pgen: 3.18323e-10 tcr: V19,CASSIAGLEEQYF
+pgen: 1.02327e-10 tcr: V30,CAWKGRGQSYEQYF
+pgen: 2.63149e-11 tcr: V28,CASSLGIAGTEAFF
+pgen: 9.7251e-11 tcr: V20,CSARDIVGAFF
+pgen: 1.29687e-09 tcr: V07,CASSPTGLYTGELFF
+pgen: 3.19451e-10 tcr: V07,CASSQGTAGYGYTF
