@@ -30,5 +30,10 @@ http://tclap.sourceforge.net/
 
 # TESTING
 
-There are some simple bash scripts that run simple tests in the `test/*/` directories.
+There are some simple bash scripts that run simple tests in the `test/*/` directories. To run them all:
+
+```
+cd test/
+./runall.bash
+```
 
