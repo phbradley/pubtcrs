@@ -335,8 +335,8 @@ int main(int argc, char** argv)
 			"be used.", ' ', "0.1");
 
 		// path to database files
- 		TCLAP::ValueArg<string> database_arg("d","database","Path to database directory",false,
-			"/home/pbradley/tcr_scripts/cxx/db/","path",cmd);
+ 		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
+			"./db/","path",cmd);
 
  		TCLAP::ValueArg<int> min_cluster_size_arg("z","min_cluster_size","Minimum cluster size "
 			" for DBSCAN clustering.",

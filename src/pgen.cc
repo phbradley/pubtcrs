@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 
 		// path to database files
  		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
-			"/home/pbradley/tcr_scripts/cxx/db/","string",cmd);
+			"./db/","path",cmd);
 
 		// option to specify an alternative model params file
  		TCLAP::ValueArg<std::string> model_file_arg("m","model_file", "File containing model params",

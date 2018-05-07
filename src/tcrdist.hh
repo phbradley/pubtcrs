@@ -106,7 +106,7 @@ TCRdistCalculator::TCRdistCalculator(
 {
 	runtime_assert( ab=='A' || ab=='B');
 	weight_cdr3_region_ = 3;
-	gap_penalty_cdr3_region_ = 12; // make optional
+	gap_penalty_cdr3_region_ = 12; // should make optional
 
 	Real const big_dist( 1e6 );
 
@@ -114,7 +114,7 @@ TCRdistCalculator::TCRdistCalculator(
 	runtime_assert( amino_acids_.size() == 20 );
 
 	// load the data
-	string const filename( "/home/pbradley/tcr_scripts/tcrdist_info_both_chains.txt" );
+	string const filename( misc::dbdir+"tcrdist_info_both_chains.txt" );
 	ifstream data( filename.c_str() );
 
 	// read the aa distance matrix
@@ -212,14 +212,8 @@ TCRdistCalculator::TCRdistCalculator(
 
 
 	{ // this part only works for beta right now!
-		string filename;
-		if ( fabs( gap_penalty_cdr3_region_ - 8. ) < 1e-3 ) {
-			filename = "/home/pbradley/tcr_scripts/tcrdist_cdf_randpubtcrs_v1.txt" ;
-		} else {
-			//runtime_assert( fabs( gap_penalty_cdr3_region_-12 ) < 1e-3 );
-			filename = "/home/pbradley/tcr_scripts/tcrdist_cdf_randpubtcrs_v1_cdr3_gap_penalty_12_ge_5_subjects.txt";
-			//filename = "/home/pbradley/tcr_scripts/tcrdist_cdf_randpubtcrs_v1_cdr3_gap_penalty_12.txt";
-		}
+		runtime_assert( fabs( gap_penalty_cdr3_region_-12 ) < 1e-3 );
+		string const filename( misc::dbdir+"tcrdist_cdf_randpubtcrs_v1_cdr3_gap_penalty_12_ge_5_subjects.txt" );
 		ifstream data( filename.c_str() );
 		string line, tmp;
 		vector<Size> totals;

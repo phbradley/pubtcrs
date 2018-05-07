@@ -12,8 +12,8 @@ int main(int argc, char** argv)
 			"(for example, annotation TCRs versus public TCRs).", ' ', "0.1" );
 
 		// path to database files
- 		TCLAP::ValueArg<string> database_arg("d","database","Path to database directory",false,
-			"/home/pbradley/tcr_scripts/cxx/db/","string",cmd);
+ 		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
+			"./db/","path",cmd);
 
  		TCLAP::ValueArg<string> tcrs_file2_arg("j","tcrs_file2","File containing the second set of TCRs. If "
 			"not provided will compute file1-vs-file1 matrix of distances.",false,"","string",cmd);

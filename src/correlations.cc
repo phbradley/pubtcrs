@@ -14,8 +14,8 @@ int main(int argc, char** argv)
 			"occurrences provided in the features file", ' ', "0.1");
 
 		// path to database files
- 		TCLAP::ValueArg<string> database_arg("d","database","Path to database directory",false,
-			"/home/pbradley/tcr_scripts/cxx/db/","string",cmd);
+ 		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
+			"./db/","path",cmd);
 
  		TCLAP::ValueArg<Real> min_pval_threshold_arg("q","min_pval_threshold","P-value threshold for writing out the "
 			"*best* TCR-feature correlation for each TCR",false,1,"double",cmd);
