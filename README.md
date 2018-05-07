@@ -2,6 +2,14 @@
 
 This repository contains C++ source code for TCR clustering and correlation analysis 
 
+- `pgen` computes TCR generation probabilities.
+
+- `tcrdists` computes TCR-TCR sequence distances using the TCRdist measure
+
+- `neighbors` computes TCR-TCR neighbor relations based on co-occurrence and sequence similarity. It can also perform DBSCAN clustering if desired.
+
+- `correlations` computes TCR-feature correlation p-values for user-defined features.
+
 # REQUIREMENTS
 
 This software depends on header files included with the BOOST C++ library. You can download the library here:
