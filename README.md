@@ -1,6 +1,6 @@
 # pubtcrs
 
-This repository contains C++ source code for TCR clustering and correlation analysis 
+This repository contains C++ source code for TCR clustering and correlation analysis. At the moment (version 0.1), the code is specialized for beta-chain repertoire analysis and uses a TCR representation that includes the V-gene family and the CDR3 sequence (for example, "V19,CASSIRSSYEQYF"). We plan on extending to the alpha chain and adding other TCR representations in the future. 
 
 - `pgen` computes TCR generation probabilities.
 
