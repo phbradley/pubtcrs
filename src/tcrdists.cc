@@ -24,9 +24,9 @@ int main(int argc, char** argv)
 
 		cmd.parse( argc, argv );
 
-		TCRdistCalculator tcrdist;
-
 		set_dbdir( database_arg.getValue() );
+
+		TCRdistCalculator tcrdist; // after set_dbdir!
 
 		string const tcrs_file1( tcrs_file1_arg.getValue() );
 		string const tcrs_file2( tcrs_file2_arg.getValue() );

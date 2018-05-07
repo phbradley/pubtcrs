@@ -363,9 +363,9 @@ int main(int argc, char** argv)
 
 		cmd.parse( argc, argv );
 
-		TCRdistCalculator tcrdist;
-
 		set_dbdir( database_arg.getValue() );
+
+		TCRdistCalculator tcrdist; // after set_dbdir
 
 		Size const similarity_mode( similarity_mode_arg.getValue() );
 		string const matrix_file1( matrix1_arg.getValue() );
