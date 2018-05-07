@@ -14,7 +14,7 @@ Edit the "BOOSTDIR" line in the Makefile to point to the location where your BOO
 
 # THANKS
 
-We are using the TCLAP header library for parsing command line arguments. As suggest by the TCLAP docs, we have included the header files within this repository for ease of compiling. Please see the author and license information in `include/tclap/`
+We are using the TCLAP header library for parsing command line arguments. As suggested by the TCLAP docs, we have included the header files within this repository for ease of compiling. Please see the author and license information in `include/tclap/`
 
 http://tclap.sourceforge.net/
 
