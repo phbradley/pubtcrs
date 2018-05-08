@@ -35,3 +35,23 @@ echo
 echo "diff <(grep ^cluster expected_output2.txt) <(grep ^cluster test_output2.txt)"
 diff <(grep ^cluster expected_output2.txt) <(grep ^cluster test_output2.txt)
 
+echo
+echo "# This command uses the neighbor relationships for DBSCAN clustering and reads DBSCAN "
+echo "# parameters from a database file."
+cmd="../../bin/neighbors -s 2 -i example1_matrix.txt -b example1_subject_bias.txt -f example1_features.txt -c -d ../../db"
+
+echo
+echo $cmd "> test_output3.txt"
+$cmd > test_output3.txt
+
+echo
+echo "# Now look for differences in the cluster output lines versus expected. Because the"
+echo "# output logfile contains the Z_CO scores and these are based on random shuffling,"
+echo "# the expected and observed logfiles will differ (but the Z_CO scores should be pretty"
+echo "# similar)."
+echo
+echo "# Comparing output to expected output (this command should produce no output):"
+echo
+echo "diff <(grep ^cluster expected_output3.txt) <(grep ^cluster test_output3.txt)"
+diff <(grep ^cluster expected_output3.txt) <(grep ^cluster test_output3.txt)
+

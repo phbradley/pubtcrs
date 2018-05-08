@@ -51,6 +51,7 @@ my_exit(
 	oss << "ERROR:: Exit from: " << file << " line: " << line << "\n";
 	string failure_message = oss.str();
 	cerr << failure_message << flush;
+	assert( false ); // for gdb?
 	exit(1);
 }
 
@@ -266,6 +267,7 @@ make_vector( T const & t1,  T const & t2 ,  T const & t3 )
 	vector<T> v;
 	v.push_back(t1);
 	v.push_back(t2);
+	v.push_back(t3);
 	return v;
 }
 

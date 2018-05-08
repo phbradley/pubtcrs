@@ -2,201 +2,201 @@ Read new feature: HLA-A*02:01 num_positives: 268 num_negatives: 361
 Read new feature: GOOD num_positives: 542 num_negatives: 124
 final_subjects_subset: 218
 start reading example1_matrix.txt
-nbrs: 2 3 tcr1: V02,CASSIGEAFF tcr2: V02,CASSLGEAFF co_pval: 1.16754e-05 tcrdist: 6 combined_pval: 2.99629e-08
-nbrs: 2 4 tcr1: V02,CASSIGEAFF tcr2: V02,CASSVGEAFF co_pval: 0.00106123 tcrdist: 3 combined_pval: 2.14916e-06
-nbrs: 3 4 tcr1: V02,CASSLGEAFF tcr2: V02,CASSVGEAFF co_pval: 1.009e-06 tcrdist: 9 combined_pval: 2.88589e-09
-nbrs: 6 7 tcr1: V03,CASSQDRFTEAFF tcr2: V03,CASSQERFTEAFF co_pval: 6.29531e-05 tcrdist: 6 combined_pval: 1.4883e-07
-nbrs: 8 19 tcr1: V04,CASSLGQGRYEQYF tcr2: V04,CASSQGTGRYEQYF co_pval: 0.0329776 tcrdist: 24 combined_pval: 5.31861e-05
-nbrs: 9 16 tcr1: V04,CASSPGQGRYEQYF tcr2: V04,CASSQGEGRYEQYF co_pval: 0.0164014 tcrdist: 18 combined_pval: 2.78268e-05
-nbrs: 9 17 tcr1: V04,CASSPGQGRYEQYF tcr2: V04,CASSQGQGRYEQYF co_pval: 0.00898514 tcrdist: 12 combined_pval: 1.58931e-05
-nbrs: 9 19 tcr1: V04,CASSPGQGRYEQYF tcr2: V04,CASSQGTGRYEQYF co_pval: 0.00752138 tcrdist: 24 combined_pval: 1.34645e-05
-nbrs: 16 17 tcr1: V04,CASSQGEGRYEQYF tcr2: V04,CASSQGQGRYEQYF co_pval: 2.6029e-05 tcrdist: 6 combined_pval: 6.42948e-08
-nbrs: 16 19 tcr1: V04,CASSQGEGRYEQYF tcr2: V04,CASSQGTGRYEQYF co_pval: 3.29417e-05 tcrdist: 12 combined_pval: 8.04389e-08
-nbrs: 17 18 tcr1: V04,CASSQGQGRYEQYF tcr2: V04,CASSQGTGKYEQYF co_pval: 0.00693991 tcrdist: 18 combined_pval: 1.24906e-05
-nbrs: 17 19 tcr1: V04,CASSQGQGRYEQYF tcr2: V04,CASSQGTGRYEQYF co_pval: 8.33297e-05 tcrdist: 12 combined_pval: 1.94199e-07
-nbrs: 17 21 tcr1: V04,CASSQGQGRYEQYF tcr2: V04,CASSRGQGRYEQYF co_pval: 0.00517723 tcrdist: 9 combined_pval: 9.50011e-06
-nbrs: 18 19 tcr1: V04,CASSQGTGKYEQYF tcr2: V04,CASSQGTGRYEQYF co_pval: 0.00540913 tcrdist: 6 combined_pval: 9.89721e-06
-nbrs: 18 21 tcr1: V04,CASSQGTGKYEQYF tcr2: V04,CASSRGQGRYEQYF co_pval: 0.0563756 tcrdist: 27 combined_pval: 9.42997e-05
-nbrs: 19 21 tcr1: V04,CASSQGTGRYEQYF tcr2: V04,CASSRGQGRYEQYF co_pval: 0.00854196 tcrdist: 21 combined_pval: 1.51611e-05
-nbrs: 24 95 tcr1: V05,CASSLGGDTYEQYF tcr2: V12,CASSLMPYEQYF co_pval: 0.000116648 tcrdist: 85 combined_pval: 8.69662e-05
-nbrs: 30 31 tcr1: V06,CASSDPGNEQFF tcr2: V06,CASSDPGNEQYF co_pval: 0.0330746 tcrdist: 0 combined_pval: 5.33308e-05
-nbrs: 51 52 tcr1: V07,CASSLDGPLDEQYF tcr2: V07,CASSLDGPLDTQYF co_pval: 0.0362915 tcrdist: 12 combined_pval: 5.81137e-05
-nbrs: 57 69 tcr1: V07,CASSLGTQPQHF tcr2: V09,CASSVGGDYGYTF co_pval: 1.98414e-05 tcrdist: 111 combined_pval: 5.58872e-05
-nbrs: 62 64 tcr1: V09,CASSLGGGTEAFF tcr2: V09,CASSLGGNTEAFF co_pval: 0.00501568 tcrdist: 12 combined_pval: 9.22276e-06
-nbrs: 62 72 tcr1: V09,CASSLGGGTEAFF tcr2: V09,CASSVGGGTEAFF co_pval: 0.0256805 tcrdist: 9 combined_pval: 4.2188e-05
-nbrs: 69 72 tcr1: V09,CASSVGGDYGYTF tcr2: V09,CASSVGGGTEAFF co_pval: 0.00028911 tcrdist: 48 combined_pval: 1.53273e-05
-nbrs: 70 77 tcr1: V09,CASSVGGGDYGYTF tcr2: V09,CASSVGGGTYEQYF co_pval: 0.00110417 tcrdist: 36 combined_pval: 1.40467e-05
-nbrs: 71 77 tcr1: V09,CASSVGGGTDTQYF tcr2: V09,CASSVGGGTYEQYF co_pval: 0.000901064 tcrdist: 24 combined_pval: 1.84249e-06
-nbrs: 81 83 tcr1: V10,CASSADGMNTEAFF tcr2: V10,CASSEDGMNTEAFF co_pval: 0.0406782 tcrdist: 12 combined_pval: 6.45811e-05
-nbrs: 90 93 tcr1: V12,CASSAGPNTEAFF tcr2: V12,CASSLGPNTEAFF co_pval: 1.20596e-05 tcrdist: 12 combined_pval: 3.09019e-08
-nbrs: 93 101 tcr1: V12,CASSLGPNTEAFF tcr2: V12,CASSSGPNTEAFF co_pval: 0.00800002 tcrdist: 12 combined_pval: 1.42621e-05
-nbrs: 101 102 tcr1: V12,CASSSGPNTEAFF tcr2: V12,CASSSGPSTEAFF co_pval: 0.010684 tcrdist: 9 combined_pval: 1.86761e-05
-nbrs: 109 111 tcr1: V14,CASSQAGALNTEAFF tcr2: V14,CASSQGGALNTEAFF co_pval: 0.000124181 tcrdist: 12 combined_pval: 2.83457e-07
-nbrs: 113 209 tcr1: V14,CASSQSPGGTQYF tcr2: V29,CSVGTGGTNEKLFF co_pval: 6.78988e-07 tcrdist: 164 combined_pval: 9.62082e-06
-nbrs: 116 119 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSGRSTDTQYF co_pval: 0.00207626 tcrdist: 12 combined_pval: 4.03756e-06
-nbrs: 116 135 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.000285448 tcrdist: 12 combined_pval: 6.23058e-07
-nbrs: 116 141 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSLRSTDTQYF co_pval: 0.0629602 tcrdist: 12 combined_pval: 9.6656e-05
-nbrs: 116 155 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.0333953 tcrdist: 12 combined_pval: 5.38092e-05
-nbrs: 116 162 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.010148 tcrdist: 12 combined_pval: 1.78018e-05
-nbrs: 117 120 tcr1: V19,CASSGRATGELFF tcr2: V19,CASSGRSTGELFF co_pval: 0.0604496 tcrdist: 9 combined_pval: 9.30969e-05
-nbrs: 118 119 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSGRSTDTQYF co_pval: 9.62221e-05 tcrdist: 12 combined_pval: 2.22583e-07
-nbrs: 118 139 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSKRSTDTQYF co_pval: 0.0141363 tcrdist: 24 combined_pval: 2.42359e-05
-nbrs: 118 149 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSPRSTDTQYF co_pval: 0.00684744 tcrdist: 24 combined_pval: 1.23352e-05
-nbrs: 118 152 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSRRSTDTQYF co_pval: 0.03504 tcrdist: 24 combined_pval: 5.62572e-05
-nbrs: 118 155 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.00061921 tcrdist: 24 combined_pval: 1.29403e-06
-nbrs: 119 120 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSGRSTGELFF co_pval: 9.22274e-06 tcrdist: 36 combined_pval: 1.55076e-07
-nbrs: 119 127 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRAAYEQYF co_pval: 0.000110446 tcrdist: 57 combined_pval: 1.01101e-05
-nbrs: 119 135 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.00127211 tcrdist: 12 combined_pval: 2.54856e-06
-nbrs: 119 136 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRSTGELFF co_pval: 0.000474732 tcrdist: 48 combined_pval: 2.43235e-05
-nbrs: 119 137 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRSTYEQYF co_pval: 0.00724486 tcrdist: 36 combined_pval: 8.05077e-05
-nbrs: 119 139 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSKRSTDTQYF co_pval: 0.0172216 tcrdist: 12 combined_pval: 2.91175e-05
-nbrs: 119 141 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSLRSTDTQYF co_pval: 0.00168218 tcrdist: 12 combined_pval: 3.3137e-06
-nbrs: 119 145 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSMRSTDTQYF co_pval: 0.0244815 tcrdist: 12 combined_pval: 4.03589e-05
-nbrs: 119 147 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSPGQKNQPQHF co_pval: 4.86712e-05 tcrdist: 84 combined_pval: 3.76702e-05
-nbrs: 119 151 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSQRSTDTQYF co_pval: 0.0310969 tcrdist: 12 combined_pval: 5.0372e-05
-nbrs: 119 153 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSSRSAYEQYF co_pval: 0.000304139 tcrdist: 48 combined_pval: 1.60688e-05
-nbrs: 119 154 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.000541871 tcrdist: 45 combined_pval: 1.36619e-05
-nbrs: 119 155 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.00157517 tcrdist: 12 combined_pval: 3.11532e-06
-nbrs: 119 160 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.000145447 tcrdist: 48 combined_pval: 8.06938e-06
-nbrs: 119 162 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.0498568 tcrdist: 12 combined_pval: 7.79358e-05
-nbrs: 119 164 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSVRSAYEQYF co_pval: 0.0015701 tcrdist: 48 combined_pval: 7.37091e-05
-nbrs: 120 123 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSIGSYGYTF co_pval: 9.63373e-05 tcrdist: 81 combined_pval: 5.29421e-05
-nbrs: 120 136 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSIRSTGELFF co_pval: 0.0035416 tcrdist: 12 combined_pval: 6.66013e-06
-nbrs: 120 156 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSSRSTGELFF co_pval: 0.0036885 tcrdist: 12 combined_pval: 6.9184e-06
-nbrs: 120 161 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSTRSSYEQYF co_pval: 0.000837812 tcrdist: 45 combined_pval: 2.05055e-05
-nbrs: 122 123 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSIGSYGYTF co_pval: 0.0195521 tcrdist: 12 combined_pval: 3.276e-05
-nbrs: 122 125 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSIGVHGYTF co_pval: 0.0272558 tcrdist: 15 combined_pval: 4.45812e-05
-nbrs: 122 126 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSIGVYGYTF co_pval: 0.011508 tcrdist: 9 combined_pval: 2.00138e-05
-nbrs: 122 157 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSTGSYGYTF co_pval: 0.0112751 tcrdist: 24 combined_pval: 1.96366e-05
-nbrs: 123 126 tcr1: V19,CASSIGSYGYTF tcr2: V19,CASSIGVYGYTF co_pval: 0.000741471 tcrdist: 12 combined_pval: 1.5335e-06
-nbrs: 123 157 tcr1: V19,CASSIGSYGYTF tcr2: V19,CASSTGSYGYTF co_pval: 0.048128 tcrdist: 12 combined_pval: 7.54373e-05
-nbrs: 124 159 tcr1: V19,CASSIGVATNEKLFF tcr2: V19,CASSTGTATNEKLFF co_pval: 0.0484738 tcrdist: 24 combined_pval: 7.59375e-05
-nbrs: 126 150 tcr1: V19,CASSIGVYGYTF tcr2: V19,CASSQGSYGYTF co_pval: 0.0108465 tcrdist: 24 combined_pval: 1.89404e-05
-nbrs: 126 157 tcr1: V19,CASSIGVYGYTF tcr2: V19,CASSTGSYGYTF co_pval: 0.0242063 tcrdist: 24 combined_pval: 3.99379e-05
-nbrs: 127 128 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRASYEQYF co_pval: 0.0532435 tcrdist: 9 combined_pval: 8.281e-05
-nbrs: 127 130 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSAYEQYF co_pval: 0.00541319 tcrdist: 9 combined_pval: 9.90414e-06
-nbrs: 127 134 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSSYEQYF co_pval: 0.0236158 tcrdist: 18 combined_pval: 3.90337e-05
-nbrs: 127 135 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.000983161 tcrdist: 45 combined_pval: 2.37969e-05
-nbrs: 127 136 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSTGELFF co_pval: 0.00118442 tcrdist: 45 combined_pval: 2.82952e-05
-nbrs: 127 137 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSTYEQYF co_pval: 8.3508e-05 tcrdist: 21 combined_pval: 1.94593e-07
-nbrs: 127 154 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.00301645 tcrdist: 30 combined_pval: 8.34743e-06
-nbrs: 128 133 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSIRSSDTQYF co_pval: 0.017635 tcrdist: 33 combined_pval: 7.02652e-05
-nbrs: 128 135 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.00312256 tcrdist: 42 combined_pval: 4.88181e-05
-nbrs: 128 144 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSMRSSYEQYF co_pval: 0.0264719 tcrdist: 18 combined_pval: 4.33918e-05
-nbrs: 128 154 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.000508505 tcrdist: 21 combined_pval: 1.0747e-06
-nbrs: 128 160 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.0250873 tcrdist: 30 combined_pval: 5.98931e-05
-nbrs: 129 130 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSIRSAYEQYF co_pval: 0.0169138 tcrdist: 24 combined_pval: 2.86337e-05
-nbrs: 129 133 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSIRSSDTQYF co_pval: 0.00882088 tcrdist: 9 combined_pval: 1.56221e-05
-nbrs: 129 139 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSKRSTDTQYF co_pval: 0.0126219 tcrdist: 24 combined_pval: 2.18111e-05
-nbrs: 129 144 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSMRSSYEQYF co_pval: 0.00556082 tcrdist: 42 combined_pval: 8.32302e-05
-nbrs: 129 155 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.0506363 tcrdist: 24 combined_pval: 7.90601e-05
-nbrs: 129 162 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.0486969 tcrdist: 24 combined_pval: 7.62603e-05
-nbrs: 130 134 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSIRSSYEQYF co_pval: 0.00254639 tcrdist: 9 combined_pval: 4.8894e-06
-nbrs: 130 135 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.00248495 tcrdist: 36 combined_pval: 2.98881e-05
-nbrs: 130 144 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSMRSSYEQYF co_pval: 0.0361488 tcrdist: 18 combined_pval: 5.79023e-05
-nbrs: 130 145 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSMRSTDTQYF co_pval: 0.00278208 tcrdist: 45 combined_pval: 6.24429e-05
-nbrs: 130 153 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSSRSAYEQYF co_pval: 0.000854334 tcrdist: 12 combined_pval: 1.7524e-06
-nbrs: 130 154 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.0215198 tcrdist: 21 combined_pval: 3.58094e-05
-nbrs: 130 160 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.0001167 tcrdist: 12 combined_pval: 2.67252e-07
-nbrs: 130 164 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSVRSAYEQYF co_pval: 0.00453987 tcrdist: 3 combined_pval: 8.40215e-06
-nbrs: 130 165 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.00460883 tcrdist: 12 combined_pval: 8.52143e-06
-nbrs: 132 133 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSIRSSDTQYF co_pval: 0.00797695 tcrdist: 36 combined_pval: 8.79861e-05
-nbrs: 132 144 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSMRSSYEQYF co_pval: 0.00925232 tcrdist: 21 combined_pval: 1.63332e-05
-nbrs: 132 153 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSSRSAYEQYF co_pval: 0.0346757 tcrdist: 24 combined_pval: 5.57158e-05
-nbrs: 132 161 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSTRSSYEQYF co_pval: 0.0169454 tcrdist: 24 combined_pval: 2.86834e-05
-nbrs: 132 165 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 2.50873e-05 tcrdist: 15 combined_pval: 6.20796e-08
-nbrs: 133 135 tcr1: V19,CASSIRSSDTQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.000698823 tcrdist: 9 combined_pval: 1.45026e-06
-nbrs: 133 145 tcr1: V19,CASSIRSSDTQYF tcr2: V19,CASSMRSTDTQYF co_pval: 0.00332783 tcrdist: 18 combined_pval: 6.28299e-06
-nbrs: 133 155 tcr1: V19,CASSIRSSDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.00625078 tcrdist: 21 combined_pval: 1.13287e-05
-nbrs: 134 135 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSIRSTDTQYF co_pval: 0.000240238 tcrdist: 33 combined_pval: 1.27019e-06
-nbrs: 134 144 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSMRSSYEQYF co_pval: 0.00280731 tcrdist: 9 combined_pval: 5.35754e-06
-nbrs: 134 151 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSQRSTDTQYF co_pval: 0.00338523 tcrdist: 45 combined_pval: 7.48565e-05
-nbrs: 134 153 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSSRSAYEQYF co_pval: 0.0138901 tcrdist: 21 combined_pval: 2.38431e-05
-nbrs: 134 154 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.0520035 tcrdist: 12 combined_pval: 8.10284e-05
-nbrs: 134 160 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.00523259 tcrdist: 21 combined_pval: 9.59503e-06
-nbrs: 135 136 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSIRSTGELFF co_pval: 0.00196493 tcrdist: 36 combined_pval: 2.40281e-05
-nbrs: 135 137 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSIRSTYEQYF co_pval: 0.00578893 tcrdist: 24 combined_pval: 1.0545e-05
-nbrs: 135 139 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSKRSTDTQYF co_pval: 0.0111947 tcrdist: 12 combined_pval: 1.95061e-05
-nbrs: 135 145 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSMRSTDTQYF co_pval: 0.0301887 tcrdist: 9 combined_pval: 4.90083e-05
-nbrs: 135 151 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSQRSTDTQYF co_pval: 0.000886746 tcrdist: 12 combined_pval: 1.81492e-06
-nbrs: 135 152 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSRRSTDTQYF co_pval: 0.0112096 tcrdist: 12 combined_pval: 1.95303e-05
-nbrs: 135 154 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.000252518 tcrdist: 45 combined_pval: 6.69277e-06
-nbrs: 135 155 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.00255673 tcrdist: 12 combined_pval: 4.90801e-06
-nbrs: 135 160 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.000557567 tcrdist: 48 combined_pval: 2.8246e-05
-nbrs: 136 142 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSLRSTGELFF co_pval: 0.0241231 tcrdist: 6 combined_pval: 3.98107e-05
-nbrs: 136 146 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSMRSTGELFF co_pval: 0.00372363 tcrdist: 9 combined_pval: 6.98006e-06
-nbrs: 136 156 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSSRSTGELFF co_pval: 0.00198401 tcrdist: 12 combined_pval: 3.86897e-06
-nbrs: 136 163 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSTRSTGELFF co_pval: 9.51298e-07 tcrdist: 12 combined_pval: 2.72758e-09
-nbrs: 136 166 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSVRSTGELFF co_pval: 0.0273007 tcrdist: 3 combined_pval: 4.46492e-05
-nbrs: 137 141 tcr1: V19,CASSIRSTYEQYF tcr2: V19,CASSLRSTDTQYF co_pval: 0.00985577 tcrdist: 30 combined_pval: 2.51811e-05
-nbrs: 137 142 tcr1: V19,CASSIRSTYEQYF tcr2: V19,CASSLRSTGELFF co_pval: 0.0210714 tcrdist: 30 combined_pval: 5.09649e-05
-nbrs: 137 154 tcr1: V19,CASSIRSTYEQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.0557989 tcrdist: 21 combined_pval: 8.64706e-05
-nbrs: 139 149 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSPRSTDTQYF co_pval: 0.00216239 tcrdist: 12 combined_pval: 4.19448e-06
-nbrs: 139 151 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSQRSTDTQYF co_pval: 0.062492 tcrdist: 9 combined_pval: 9.59932e-05
-nbrs: 139 155 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 2.90314e-05 tcrdist: 12 combined_pval: 7.13307e-08
-nbrs: 139 162 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.00401124 tcrdist: 12 combined_pval: 7.48337e-06
-nbrs: 140 144 tcr1: V19,CASSLRSSYEQYF tcr2: V19,CASSMRSSYEQYF co_pval: 0.0634948 tcrdist: 6 combined_pval: 9.74123e-05
-nbrs: 140 153 tcr1: V19,CASSLRSSYEQYF tcr2: V19,CASSSRSAYEQYF co_pval: 0.041234 tcrdist: 21 combined_pval: 6.53964e-05
-nbrs: 141 145 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSMRSTDTQYF co_pval: 0.0638216 tcrdist: 6 combined_pval: 9.78744e-05
-nbrs: 141 152 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSRRSTDTQYF co_pval: 0.0091823 tcrdist: 12 combined_pval: 1.6218e-05
-nbrs: 141 155 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.017889 tcrdist: 12 combined_pval: 3.01643e-05
-nbrs: 141 162 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.0498997 tcrdist: 12 combined_pval: 7.79978e-05
-nbrs: 142 146 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSMRSTGELFF co_pval: 0.0296002 tcrdist: 6 combined_pval: 4.81228e-05
-nbrs: 142 156 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSSRSTGELFF co_pval: 0.000836085 tcrdist: 12 combined_pval: 1.71713e-06
-nbrs: 142 163 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSTRSTGELFF co_pval: 4.0249e-05 tcrdist: 12 combined_pval: 9.73145e-08
-nbrs: 142 166 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSVRSTGELFF co_pval: 0.0516419 tcrdist: 9 combined_pval: 8.05083e-05
-nbrs: 143 148 tcr1: V19,CASSMGTATNEKLFF tcr2: V19,CASSPGTATNEKLFF co_pval: 0.0052656 tcrdist: 12 combined_pval: 9.65158e-06
-nbrs: 143 159 tcr1: V19,CASSMGTATNEKLFF tcr2: V19,CASSTGTATNEKLFF co_pval: 0.00724305 tcrdist: 12 combined_pval: 1.2999e-05
-nbrs: 144 153 tcr1: V19,CASSMRSSYEQYF tcr2: V19,CASSSRSAYEQYF co_pval: 0.00179606 tcrdist: 21 combined_pval: 3.52391e-06
-nbrs: 144 154 tcr1: V19,CASSMRSSYEQYF tcr2: V19,CASSSRSSYEQYF co_pval: 0.000536434 tcrdist: 12 combined_pval: 1.13028e-06
-nbrs: 144 165 tcr1: V19,CASSMRSSYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.00372951 tcrdist: 9 combined_pval: 6.99037e-06
-nbrs: 145 149 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSPRSTDTQYF co_pval: 0.00259958 tcrdist: 12 combined_pval: 4.98508e-06
-nbrs: 145 150 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSQGSYGYTF co_pval: 7.16245e-05 tcrdist: 81 combined_pval: 4.0229e-05
-nbrs: 145 151 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSQRSTDTQYF co_pval: 0.0592681 tcrdist: 12 combined_pval: 9.14177e-05
-nbrs: 145 155 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.000300228 tcrdist: 12 combined_pval: 6.535e-07
-nbrs: 146 163 tcr1: V19,CASSMRSTGELFF tcr2: V19,CASSTRSTGELFF co_pval: 0.00335574 tcrdist: 12 combined_pval: 6.33233e-06
-nbrs: 148 159 tcr1: V19,CASSPGTATNEKLFF tcr2: V19,CASSTGTATNEKLFF co_pval: 0.0522341 tcrdist: 12 combined_pval: 8.136e-05
-nbrs: 149 155 tcr1: V19,CASSPRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.00432959 tcrdist: 12 combined_pval: 8.03761e-06
-nbrs: 151 152 tcr1: V19,CASSQRSTDTQYF tcr2: V19,CASSRRSTDTQYF co_pval: 0.00870426 tcrdist: 9 combined_pval: 1.54295e-05
-nbrs: 151 160 tcr1: V19,CASSQRSTDTQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.00142772 tcrdist: 48 combined_pval: 6.75119e-05
-nbrs: 151 162 tcr1: V19,CASSQRSTDTQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.0438223 tcrdist: 12 combined_pval: 6.91812e-05
-nbrs: 152 155 tcr1: V19,CASSRRSTDTQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.00219932 tcrdist: 12 combined_pval: 4.26166e-06
-nbrs: 153 160 tcr1: V19,CASSSRSAYEQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.0295058 tcrdist: 9 combined_pval: 4.79806e-05
-nbrs: 153 162 tcr1: V19,CASSSRSAYEQYF tcr2: V19,CASSTRSTDTQYF co_pval: 0.00403299 tcrdist: 45 combined_pval: 8.79855e-05
-nbrs: 153 165 tcr1: V19,CASSSRSAYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.00712269 tcrdist: 21 combined_pval: 1.27973e-05
-nbrs: 154 155 tcr1: V19,CASSSRSSYEQYF tcr2: V19,CASSSRSTDTQYF co_pval: 0.0257329 tcrdist: 33 combined_pval: 9.95818e-05
-nbrs: 154 160 tcr1: V19,CASSSRSSYEQYF tcr2: V19,CASSTRSAYEQYF co_pval: 0.00166 tcrdist: 18 combined_pval: 3.27265e-06
-nbrs: 154 165 tcr1: V19,CASSSRSSYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.014547 tcrdist: 12 combined_pval: 2.48901e-05
-nbrs: 155 161 tcr1: V19,CASSSRSTDTQYF tcr2: V19,CASSTRSSYEQYF co_pval: 0.00129464 tcrdist: 42 combined_pval: 2.15573e-05
-nbrs: 155 165 tcr1: V19,CASSSRSTDTQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.000762386 tcrdist: 45 combined_pval: 1.87812e-05
-nbrs: 156 160 tcr1: V19,CASSSRSTGELFF tcr2: V19,CASSTRSAYEQYF co_pval: 0.00272439 tcrdist: 45 combined_pval: 6.12445e-05
-nbrs: 156 163 tcr1: V19,CASSSRSTGELFF tcr2: V19,CASSTRSTGELFF co_pval: 0.000119204 tcrdist: 9 combined_pval: 2.72682e-07
-nbrs: 160 161 tcr1: V19,CASSTRSAYEQYF tcr2: V19,CASSTRSSYEQYF co_pval: 0.00625642 tcrdist: 9 combined_pval: 1.13383e-05
-nbrs: 160 163 tcr1: V19,CASSTRSAYEQYF tcr2: V19,CASSTRSTGELFF co_pval: 0.00416342 tcrdist: 36 combined_pval: 4.82383e-05
-nbrs: 160 165 tcr1: V19,CASSTRSAYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.052187 tcrdist: 21 combined_pval: 8.12924e-05
-nbrs: 161 164 tcr1: V19,CASSTRSSYEQYF tcr2: V19,CASSVRSAYEQYF co_pval: 0.0591816 tcrdist: 21 combined_pval: 9.12948e-05
-nbrs: 161 165 tcr1: V19,CASSTRSSYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.0590827 tcrdist: 12 combined_pval: 9.1154e-05
-nbrs: 164 165 tcr1: V19,CASSVRSAYEQYF tcr2: V19,CASSVRSSYEQYF co_pval: 0.00311589 tcrdist: 9 combined_pval: 5.90745e-06
-nbrs: 168 169 tcr1: V20,CSARDATGNGYTF tcr2: V20,CSARDETGNGYTF co_pval: 0.036345 tcrdist: 12 combined_pval: 5.81929e-05
-nbrs: 168 170 tcr1: V20,CSARDATGNGYTF tcr2: V20,CSARDGTGNGYTF co_pval: 0.00198946 tcrdist: 12 combined_pval: 3.87895e-06
-nbrs: 168 176 tcr1: V20,CSARDATGNGYTF tcr2: V20,CSARDRTGNGYTF co_pval: 0.00165841 tcrdist: 12 combined_pval: 3.26971e-06
-nbrs: 169 170 tcr1: V20,CSARDETGNGYTF tcr2: V20,CSARDGTGNGYTF co_pval: 0.000694198 tcrdist: 12 combined_pval: 1.44122e-06
-nbrs: 169 171 tcr1: V20,CSARDETGNGYTF tcr2: V20,CSARDKTGNGYTF co_pval: 0.014488 tcrdist: 9 combined_pval: 2.47961e-05
-nbrs: 169 176 tcr1: V20,CSARDETGNGYTF tcr2: V20,CSARDRTGNGYTF co_pval: 0.0173615 tcrdist: 12 combined_pval: 2.93372e-05
-nbrs: 170 172 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDQTGNGYTF co_pval: 0.00418251 tcrdist: 12 combined_pval: 7.78191e-06
-nbrs: 170 176 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDRTGNGYTF co_pval: 1.46859e-06 tcrdist: 12 combined_pval: 4.13425e-09
-nbrs: 170 177 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDRVGNGYTF co_pval: 0.0260112 tcrdist: 24 combined_pval: 4.26914e-05
-nbrs: 170 178 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDRVGNTIYF co_pval: 0.000213789 tcrdist: 48 combined_pval: 1.15656e-05
-nbrs: 170 181 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDSTGNGYTF co_pval: 0.0161821 tcrdist: 12 combined_pval: 2.74809e-05
-nbrs: 171 178 tcr1: V20,CSARDKTGNGYTF tcr2: V20,CSARDRVGNTIYF co_pval: 0.000749876 tcrdist: 42 combined_pval: 1.29594e-05
-nbrs: 172 176 tcr1: V20,CSARDQTGNGYTF tcr2: V20,CSARDRTGNGYTF co_pval: 0.0476255 tcrdist: 9 combined_pval: 7.47096e-05
-nbrs: 172 177 tcr1: V20,CSARDQTGNGYTF tcr2: V20,CSARDRVGNGYTF co_pval: 0.0449771 tcrdist: 21 combined_pval: 7.08638e-05
-nbrs: 176 177 tcr1: V20,CSARDRTGNGYTF tcr2: V20,CSARDRVGNGYTF co_pval: 0.000809453 tcrdist: 12 combined_pval: 1.66558e-06
-nbrs: 176 178 tcr1: V20,CSARDRTGNGYTF tcr2: V20,CSARDRVGNTIYF co_pval: 8.03659e-05 tcrdist: 36 combined_pval: 1.20249e-06
-nbrs: 176 181 tcr1: V20,CSARDRTGNGYTF tcr2: V20,CSARDSTGNGYTF co_pval: 0.0285131 tcrdist: 12 combined_pval: 4.64834e-05
-nbrs: 177 181 tcr1: V20,CSARDRVGNGYTF tcr2: V20,CSARDSTGNGYTF co_pval: 0.0394001 tcrdist: 24 combined_pval: 6.2703e-05
-nbrs: 178 183 tcr1: V20,CSARDRVGNTIYF tcr2: V20,CSARVGVGNTIYF co_pval: 0.00274327 tcrdist: 24 combined_pval: 5.24293e-06
-nbrs: 205 207 tcr1: V29,CSVGAGGTNEKLFF tcr2: V29,CSVGQGGTNEKLFF co_pval: 0.000464029 tcrdist: 12 combined_pval: 9.85796e-07
-nbrs: 205 209 tcr1: V29,CSVGAGGTNEKLFF tcr2: V29,CSVGTGGTNEKLFF co_pval: 2.87239e-05 tcrdist: 12 combined_pval: 7.06118e-08
-nbrs: 207 209 tcr1: V29,CSVGQGGTNEKLFF tcr2: V29,CSVGTGGTNEKLFF co_pval: 0.000662229 tcrdist: 12 combined_pval: 1.3786e-06
-nbrs: 208 209 tcr1: V29,CSVGSGGTNEKLFF tcr2: V29,CSVGTGGTNEKLFF co_pval: 1.9586e-05 tcrdist: 9 combined_pval: 4.90482e-08
+nbrs: 2 3 tcr1: V02,CASSIGEAFF tcr2: V02,CASSLGEAFF pval: 2.99629e-08 co_pval: 1.16754e-05 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 2 4 tcr1: V02,CASSIGEAFF tcr2: V02,CASSVGEAFF pval: 2.14916e-06 co_pval: 0.00106123 tcrdist: 3 tcrdist_pval: 7.43929e-08
+nbrs: 3 4 tcr1: V02,CASSLGEAFF tcr2: V02,CASSVGEAFF pval: 2.88589e-09 co_pval: 1.009e-06 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 6 7 tcr1: V03,CASSQDRFTEAFF tcr2: V03,CASSQERFTEAFF pval: 1.4883e-07 co_pval: 6.29531e-05 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 8 19 tcr1: V04,CASSLGQGRYEQYF tcr2: V04,CASSQGTGRYEQYF pval: 5.31861e-05 co_pval: 0.0329776 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 9 16 tcr1: V04,CASSPGQGRYEQYF tcr2: V04,CASSQGEGRYEQYF pval: 2.78268e-05 co_pval: 0.0164014 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 9 17 tcr1: V04,CASSPGQGRYEQYF tcr2: V04,CASSQGQGRYEQYF pval: 1.58931e-05 co_pval: 0.00898514 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 9 19 tcr1: V04,CASSPGQGRYEQYF tcr2: V04,CASSQGTGRYEQYF pval: 1.34645e-05 co_pval: 0.00752138 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 16 17 tcr1: V04,CASSQGEGRYEQYF tcr2: V04,CASSQGQGRYEQYF pval: 6.42948e-08 co_pval: 2.6029e-05 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 16 19 tcr1: V04,CASSQGEGRYEQYF tcr2: V04,CASSQGTGRYEQYF pval: 8.04389e-08 co_pval: 3.29417e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 17 18 tcr1: V04,CASSQGQGRYEQYF tcr2: V04,CASSQGTGKYEQYF pval: 1.24906e-05 co_pval: 0.00693991 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 17 19 tcr1: V04,CASSQGQGRYEQYF tcr2: V04,CASSQGTGRYEQYF pval: 1.94199e-07 co_pval: 8.33297e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 17 21 tcr1: V04,CASSQGQGRYEQYF tcr2: V04,CASSRGQGRYEQYF pval: 9.50011e-06 co_pval: 0.00517723 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 18 19 tcr1: V04,CASSQGTGKYEQYF tcr2: V04,CASSQGTGRYEQYF pval: 9.89721e-06 co_pval: 0.00540913 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 18 21 tcr1: V04,CASSQGTGKYEQYF tcr2: V04,CASSRGQGRYEQYF pval: 9.42997e-05 co_pval: 0.0563756 tcrdist: 27 tcrdist_pval: 0.000130476
+nbrs: 19 21 tcr1: V04,CASSQGTGRYEQYF tcr2: V04,CASSRGQGRYEQYF pval: 1.51611e-05 co_pval: 0.00854196 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 24 95 tcr1: V05,CASSLGGDTYEQYF tcr2: V12,CASSLMPYEQYF pval: 8.69662e-05 co_pval: 0.000116648 tcrdist: 85 tcrdist_pval: 0.0577592
+nbrs: 30 31 tcr1: V06,CASSDPGNEQFF tcr2: V06,CASSDPGNEQYF pval: 5.33308e-05 co_pval: 0.0330746 tcrdist: 0 tcrdist_pval: 3.08651e-08
+nbrs: 51 52 tcr1: V07,CASSLDGPLDEQYF tcr2: V07,CASSLDGPLDTQYF pval: 5.81137e-05 co_pval: 0.0362915 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 57 69 tcr1: V07,CASSLGTQPQHF tcr2: V09,CASSVGGDYGYTF pval: 5.58872e-05 co_pval: 1.98414e-05 tcrdist: 111 tcrdist_pval: 0.210415
+nbrs: 62 64 tcr1: V09,CASSLGGGTEAFF tcr2: V09,CASSLGGNTEAFF pval: 9.22276e-06 co_pval: 0.00501568 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 62 72 tcr1: V09,CASSLGGGTEAFF tcr2: V09,CASSVGGGTEAFF pval: 4.2188e-05 co_pval: 0.0256805 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 69 72 tcr1: V09,CASSVGGDYGYTF tcr2: V09,CASSVGGGTEAFF pval: 1.53273e-05 co_pval: 0.00028911 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 70 77 tcr1: V09,CASSVGGGDYGYTF tcr2: V09,CASSVGGGTYEQYF pval: 1.40467e-05 co_pval: 0.00110417 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 71 77 tcr1: V09,CASSVGGGTDTQYF tcr2: V09,CASSVGGGTYEQYF pval: 1.84249e-06 co_pval: 0.000901064 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 81 83 tcr1: V10,CASSADGMNTEAFF tcr2: V10,CASSEDGMNTEAFF pval: 6.45811e-05 co_pval: 0.0406782 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 90 93 tcr1: V12,CASSAGPNTEAFF tcr2: V12,CASSLGPNTEAFF pval: 3.09019e-08 co_pval: 1.20596e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 93 101 tcr1: V12,CASSLGPNTEAFF tcr2: V12,CASSSGPNTEAFF pval: 1.42621e-05 co_pval: 0.00800002 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 101 102 tcr1: V12,CASSSGPNTEAFF tcr2: V12,CASSSGPSTEAFF pval: 1.86761e-05 co_pval: 0.010684 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 109 111 tcr1: V14,CASSQAGALNTEAFF tcr2: V14,CASSQGGALNTEAFF pval: 2.83457e-07 co_pval: 0.000124181 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 113 209 tcr1: V14,CASSQSPGGTQYF tcr2: V29,CSVGTGGTNEKLFF pval: 9.62082e-06 co_pval: 6.78988e-07 tcrdist: 164 tcrdist_pval: 0.927435
+nbrs: 116 119 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSGRSTDTQYF pval: 4.03756e-06 co_pval: 0.00207626 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 116 135 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSIRSTDTQYF pval: 6.23058e-07 co_pval: 0.000285448 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 116 141 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSLRSTDTQYF pval: 9.6656e-05 co_pval: 0.0629602 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 116 155 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 5.38092e-05 co_pval: 0.0333953 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 116 162 tcr1: V19,CASSFRSTDTQYF tcr2: V19,CASSTRSTDTQYF pval: 1.78018e-05 co_pval: 0.010148 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 117 120 tcr1: V19,CASSGRATGELFF tcr2: V19,CASSGRSTGELFF pval: 9.30969e-05 co_pval: 0.0604496 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 118 119 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSGRSTDTQYF pval: 2.22583e-07 co_pval: 9.62221e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 118 139 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSKRSTDTQYF pval: 2.42359e-05 co_pval: 0.0141363 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 118 149 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSPRSTDTQYF pval: 1.23352e-05 co_pval: 0.00684744 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 118 152 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSRRSTDTQYF pval: 5.62572e-05 co_pval: 0.03504 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 118 155 tcr1: V19,CASSGRSADTQYF tcr2: V19,CASSSRSTDTQYF pval: 1.29403e-06 co_pval: 0.00061921 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 119 120 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSGRSTGELFF pval: 1.55076e-07 co_pval: 9.22274e-06 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 119 127 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRAAYEQYF pval: 1.01101e-05 co_pval: 0.000110446 tcrdist: 57 tcrdist_pval: 0.0060124
+nbrs: 119 135 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRSTDTQYF pval: 2.54856e-06 co_pval: 0.00127211 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 136 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRSTGELFF pval: 2.43235e-05 co_pval: 0.000474732 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 119 137 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSIRSTYEQYF pval: 8.05077e-05 co_pval: 0.00724486 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 119 139 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSKRSTDTQYF pval: 2.91175e-05 co_pval: 0.0172216 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 141 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSLRSTDTQYF pval: 3.3137e-06 co_pval: 0.00168218 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 145 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSMRSTDTQYF pval: 4.03589e-05 co_pval: 0.0244815 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 147 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSPGQKNQPQHF pval: 3.76702e-05 co_pval: 4.86712e-05 tcrdist: 84 tcrdist_pval: 0.0560355
+nbrs: 119 151 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSQRSTDTQYF pval: 5.0372e-05 co_pval: 0.0310969 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 153 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSSRSAYEQYF pval: 1.60688e-05 co_pval: 0.000304139 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 119 154 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSSRSSYEQYF pval: 1.36619e-05 co_pval: 0.000541871 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 119 155 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 3.11532e-06 co_pval: 0.00157517 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 160 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSTRSAYEQYF pval: 8.06938e-06 co_pval: 0.000145447 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 119 162 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSTRSTDTQYF pval: 7.79358e-05 co_pval: 0.0498568 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 119 164 tcr1: V19,CASSGRSTDTQYF tcr2: V19,CASSVRSAYEQYF pval: 7.37091e-05 co_pval: 0.0015701 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 120 123 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSIGSYGYTF pval: 5.29421e-05 co_pval: 9.63373e-05 tcrdist: 81 tcrdist_pval: 0.0408741
+nbrs: 120 136 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSIRSTGELFF pval: 6.66013e-06 co_pval: 0.0035416 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 120 156 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSSRSTGELFF pval: 6.9184e-06 co_pval: 0.0036885 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 120 161 tcr1: V19,CASSGRSTGELFF tcr2: V19,CASSTRSSYEQYF pval: 2.05055e-05 co_pval: 0.000837812 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 122 123 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSIGSYGYTF pval: 3.276e-05 co_pval: 0.0195521 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 122 125 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSIGVHGYTF pval: 4.45812e-05 co_pval: 0.0272558 tcrdist: 15 tcrdist_pval: 9.40754e-06
+nbrs: 122 126 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSIGVYGYTF pval: 2.00138e-05 co_pval: 0.011508 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 122 157 tcr1: V19,CASSIGLYGYTF tcr2: V19,CASSTGSYGYTF pval: 1.96366e-05 co_pval: 0.0112751 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 123 126 tcr1: V19,CASSIGSYGYTF tcr2: V19,CASSIGVYGYTF pval: 1.5335e-06 co_pval: 0.000741471 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 123 157 tcr1: V19,CASSIGSYGYTF tcr2: V19,CASSTGSYGYTF pval: 7.54373e-05 co_pval: 0.048128 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 124 159 tcr1: V19,CASSIGVATNEKLFF tcr2: V19,CASSTGTATNEKLFF pval: 7.59375e-05 co_pval: 0.0484738 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 126 150 tcr1: V19,CASSIGVYGYTF tcr2: V19,CASSQGSYGYTF pval: 1.89404e-05 co_pval: 0.0108465 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 126 157 tcr1: V19,CASSIGVYGYTF tcr2: V19,CASSTGSYGYTF pval: 3.99379e-05 co_pval: 0.0242063 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 127 128 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRASYEQYF pval: 8.281e-05 co_pval: 0.0532435 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 127 130 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSAYEQYF pval: 9.90414e-06 co_pval: 0.00541319 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 127 134 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSSYEQYF pval: 3.90337e-05 co_pval: 0.0236158 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 127 135 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSTDTQYF pval: 2.37969e-05 co_pval: 0.000983161 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 127 136 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSTGELFF pval: 2.82952e-05 co_pval: 0.00118442 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 127 137 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSIRSTYEQYF pval: 1.94593e-07 co_pval: 8.3508e-05 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 127 154 tcr1: V19,CASSIRAAYEQYF tcr2: V19,CASSSRSSYEQYF pval: 8.34743e-06 co_pval: 0.00301645 tcrdist: 30 tcrdist_pval: 0.000179347
+nbrs: 128 133 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSIRSSDTQYF pval: 7.02652e-05 co_pval: 0.017635 tcrdist: 33 tcrdist_pval: 0.000303255
+nbrs: 128 135 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSIRSTDTQYF pval: 4.88181e-05 co_pval: 0.00312256 tcrdist: 42 tcrdist_pval: 0.00115529
+nbrs: 128 144 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSMRSSYEQYF pval: 4.33918e-05 co_pval: 0.0264719 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 128 154 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSSRSSYEQYF pval: 1.0747e-06 co_pval: 0.000508505 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 128 160 tcr1: V19,CASSIRASYEQYF tcr2: V19,CASSTRSAYEQYF pval: 5.98931e-05 co_pval: 0.0250873 tcrdist: 30 tcrdist_pval: 0.000179347
+nbrs: 129 130 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSIRSAYEQYF pval: 2.86337e-05 co_pval: 0.0169138 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 129 133 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSIRSSDTQYF pval: 1.56221e-05 co_pval: 0.00882088 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 129 139 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSKRSTDTQYF pval: 2.18111e-05 co_pval: 0.0126219 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 129 144 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSMRSSYEQYF pval: 8.32302e-05 co_pval: 0.00556082 tcrdist: 42 tcrdist_pval: 0.00115529
+nbrs: 129 155 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSSRSTDTQYF pval: 7.90601e-05 co_pval: 0.0506363 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 129 162 tcr1: V19,CASSIRSADTQYF tcr2: V19,CASSTRSTDTQYF pval: 7.62603e-05 co_pval: 0.0486969 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 130 134 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSIRSSYEQYF pval: 4.8894e-06 co_pval: 0.00254639 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 130 135 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSIRSTDTQYF pval: 2.98881e-05 co_pval: 0.00248495 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 130 144 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSMRSSYEQYF pval: 5.79023e-05 co_pval: 0.0361488 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 130 145 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSMRSTDTQYF pval: 6.24429e-05 co_pval: 0.00278208 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 130 153 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSSRSAYEQYF pval: 1.7524e-06 co_pval: 0.000854334 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 130 154 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSSRSSYEQYF pval: 3.58094e-05 co_pval: 0.0215198 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 130 160 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSTRSAYEQYF pval: 2.67252e-07 co_pval: 0.0001167 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 130 164 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSVRSAYEQYF pval: 8.40215e-06 co_pval: 0.00453987 tcrdist: 3 tcrdist_pval: 7.43929e-08
+nbrs: 130 165 tcr1: V19,CASSIRSAYEQYF tcr2: V19,CASSVRSSYEQYF pval: 8.52143e-06 co_pval: 0.00460883 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 132 133 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSIRSSDTQYF pval: 8.79861e-05 co_pval: 0.00797695 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 132 144 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSMRSSYEQYF pval: 1.63332e-05 co_pval: 0.00925232 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 132 153 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSSRSAYEQYF pval: 5.57158e-05 co_pval: 0.0346757 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 132 161 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSTRSSYEQYF pval: 2.86834e-05 co_pval: 0.0169454 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 132 165 tcr1: V19,CASSIRSGYEQYF tcr2: V19,CASSVRSSYEQYF pval: 6.20796e-08 co_pval: 2.50873e-05 tcrdist: 15 tcrdist_pval: 9.40754e-06
+nbrs: 133 135 tcr1: V19,CASSIRSSDTQYF tcr2: V19,CASSIRSTDTQYF pval: 1.45026e-06 co_pval: 0.000698823 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 133 145 tcr1: V19,CASSIRSSDTQYF tcr2: V19,CASSMRSTDTQYF pval: 6.28299e-06 co_pval: 0.00332783 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 133 155 tcr1: V19,CASSIRSSDTQYF tcr2: V19,CASSSRSTDTQYF pval: 1.13287e-05 co_pval: 0.00625078 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 134 135 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSIRSTDTQYF pval: 1.27019e-06 co_pval: 0.000240238 tcrdist: 33 tcrdist_pval: 0.000303255
+nbrs: 134 144 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSMRSSYEQYF pval: 5.35754e-06 co_pval: 0.00280731 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 134 151 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSQRSTDTQYF pval: 7.48565e-05 co_pval: 0.00338523 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 134 153 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSSRSAYEQYF pval: 2.38431e-05 co_pval: 0.0138901 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 134 154 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSSRSSYEQYF pval: 8.10284e-05 co_pval: 0.0520035 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 134 160 tcr1: V19,CASSIRSSYEQYF tcr2: V19,CASSTRSAYEQYF pval: 9.59503e-06 co_pval: 0.00523259 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 135 136 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSIRSTGELFF pval: 2.40281e-05 co_pval: 0.00196493 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 135 137 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSIRSTYEQYF pval: 1.0545e-05 co_pval: 0.00578893 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 135 139 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSKRSTDTQYF pval: 1.95061e-05 co_pval: 0.0111947 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 135 145 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSMRSTDTQYF pval: 4.90083e-05 co_pval: 0.0301887 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 135 151 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSQRSTDTQYF pval: 1.81492e-06 co_pval: 0.000886746 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 135 152 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSRRSTDTQYF pval: 1.95303e-05 co_pval: 0.0112096 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 135 154 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSSRSSYEQYF pval: 6.69277e-06 co_pval: 0.000252518 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 135 155 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 4.90801e-06 co_pval: 0.00255673 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 135 160 tcr1: V19,CASSIRSTDTQYF tcr2: V19,CASSTRSAYEQYF pval: 2.8246e-05 co_pval: 0.000557567 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 136 142 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSLRSTGELFF pval: 3.98107e-05 co_pval: 0.0241231 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 136 146 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSMRSTGELFF pval: 6.98006e-06 co_pval: 0.00372363 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 136 156 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSSRSTGELFF pval: 3.86897e-06 co_pval: 0.00198401 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 136 163 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSTRSTGELFF pval: 2.72758e-09 co_pval: 9.51298e-07 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 136 166 tcr1: V19,CASSIRSTGELFF tcr2: V19,CASSVRSTGELFF pval: 4.46492e-05 co_pval: 0.0273007 tcrdist: 3 tcrdist_pval: 7.43929e-08
+nbrs: 137 141 tcr1: V19,CASSIRSTYEQYF tcr2: V19,CASSLRSTDTQYF pval: 2.51811e-05 co_pval: 0.00985577 tcrdist: 30 tcrdist_pval: 0.000179347
+nbrs: 137 142 tcr1: V19,CASSIRSTYEQYF tcr2: V19,CASSLRSTGELFF pval: 5.09649e-05 co_pval: 0.0210714 tcrdist: 30 tcrdist_pval: 0.000179347
+nbrs: 137 154 tcr1: V19,CASSIRSTYEQYF tcr2: V19,CASSSRSSYEQYF pval: 8.64706e-05 co_pval: 0.0557989 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 139 149 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSPRSTDTQYF pval: 4.19448e-06 co_pval: 0.00216239 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 139 151 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSQRSTDTQYF pval: 9.59932e-05 co_pval: 0.062492 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 139 155 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 7.13307e-08 co_pval: 2.90314e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 139 162 tcr1: V19,CASSKRSTDTQYF tcr2: V19,CASSTRSTDTQYF pval: 7.48337e-06 co_pval: 0.00401124 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 140 144 tcr1: V19,CASSLRSSYEQYF tcr2: V19,CASSMRSSYEQYF pval: 9.74123e-05 co_pval: 0.0634948 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 140 153 tcr1: V19,CASSLRSSYEQYF tcr2: V19,CASSSRSAYEQYF pval: 6.53964e-05 co_pval: 0.041234 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 141 145 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSMRSTDTQYF pval: 9.78744e-05 co_pval: 0.0638216 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 141 152 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSRRSTDTQYF pval: 1.6218e-05 co_pval: 0.0091823 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 141 155 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 3.01643e-05 co_pval: 0.017889 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 141 162 tcr1: V19,CASSLRSTDTQYF tcr2: V19,CASSTRSTDTQYF pval: 7.79978e-05 co_pval: 0.0498997 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 142 146 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSMRSTGELFF pval: 4.81228e-05 co_pval: 0.0296002 tcrdist: 6 tcrdist_pval: 2.66706e-07
+nbrs: 142 156 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSSRSTGELFF pval: 1.71713e-06 co_pval: 0.000836085 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 142 163 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSTRSTGELFF pval: 9.73145e-08 co_pval: 4.0249e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 142 166 tcr1: V19,CASSLRSTGELFF tcr2: V19,CASSVRSTGELFF pval: 8.05083e-05 co_pval: 0.0516419 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 143 148 tcr1: V19,CASSMGTATNEKLFF tcr2: V19,CASSPGTATNEKLFF pval: 9.65158e-06 co_pval: 0.0052656 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 143 159 tcr1: V19,CASSMGTATNEKLFF tcr2: V19,CASSTGTATNEKLFF pval: 1.2999e-05 co_pval: 0.00724305 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 144 153 tcr1: V19,CASSMRSSYEQYF tcr2: V19,CASSSRSAYEQYF pval: 3.52391e-06 co_pval: 0.00179606 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 144 154 tcr1: V19,CASSMRSSYEQYF tcr2: V19,CASSSRSSYEQYF pval: 1.13028e-06 co_pval: 0.000536434 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 144 165 tcr1: V19,CASSMRSSYEQYF tcr2: V19,CASSVRSSYEQYF pval: 6.99037e-06 co_pval: 0.00372951 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 145 149 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSPRSTDTQYF pval: 4.98508e-06 co_pval: 0.00259958 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 145 150 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSQGSYGYTF pval: 4.0229e-05 co_pval: 7.16245e-05 tcrdist: 81 tcrdist_pval: 0.0408741
+nbrs: 145 151 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSQRSTDTQYF pval: 9.14177e-05 co_pval: 0.0592681 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 145 155 tcr1: V19,CASSMRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 6.535e-07 co_pval: 0.000300228 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 146 163 tcr1: V19,CASSMRSTGELFF tcr2: V19,CASSTRSTGELFF pval: 6.33233e-06 co_pval: 0.00335574 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 148 159 tcr1: V19,CASSPGTATNEKLFF tcr2: V19,CASSTGTATNEKLFF pval: 8.136e-05 co_pval: 0.0522341 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 149 155 tcr1: V19,CASSPRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 8.03761e-06 co_pval: 0.00432959 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 151 152 tcr1: V19,CASSQRSTDTQYF tcr2: V19,CASSRRSTDTQYF pval: 1.54295e-05 co_pval: 0.00870426 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 151 160 tcr1: V19,CASSQRSTDTQYF tcr2: V19,CASSTRSAYEQYF pval: 6.75119e-05 co_pval: 0.00142772 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 151 162 tcr1: V19,CASSQRSTDTQYF tcr2: V19,CASSTRSTDTQYF pval: 6.91812e-05 co_pval: 0.0438223 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 152 155 tcr1: V19,CASSRRSTDTQYF tcr2: V19,CASSSRSTDTQYF pval: 4.26166e-06 co_pval: 0.00219932 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 153 160 tcr1: V19,CASSSRSAYEQYF tcr2: V19,CASSTRSAYEQYF pval: 4.79806e-05 co_pval: 0.0295058 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 153 162 tcr1: V19,CASSSRSAYEQYF tcr2: V19,CASSTRSTDTQYF pval: 8.79855e-05 co_pval: 0.00403299 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 153 165 tcr1: V19,CASSSRSAYEQYF tcr2: V19,CASSVRSSYEQYF pval: 1.27973e-05 co_pval: 0.00712269 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 154 155 tcr1: V19,CASSSRSSYEQYF tcr2: V19,CASSSRSTDTQYF pval: 9.95818e-05 co_pval: 0.0257329 tcrdist: 33 tcrdist_pval: 0.000303255
+nbrs: 154 160 tcr1: V19,CASSSRSSYEQYF tcr2: V19,CASSTRSAYEQYF pval: 3.27265e-06 co_pval: 0.00166 tcrdist: 18 tcrdist_pval: 1.46261e-05
+nbrs: 154 165 tcr1: V19,CASSSRSSYEQYF tcr2: V19,CASSVRSSYEQYF pval: 2.48901e-05 co_pval: 0.014547 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 155 161 tcr1: V19,CASSSRSTDTQYF tcr2: V19,CASSTRSSYEQYF pval: 2.15573e-05 co_pval: 0.00129464 tcrdist: 42 tcrdist_pval: 0.00115529
+nbrs: 155 165 tcr1: V19,CASSSRSTDTQYF tcr2: V19,CASSVRSSYEQYF pval: 1.87812e-05 co_pval: 0.000762386 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 156 160 tcr1: V19,CASSSRSTGELFF tcr2: V19,CASSTRSAYEQYF pval: 6.12445e-05 co_pval: 0.00272439 tcrdist: 45 tcrdist_pval: 0.00169183
+nbrs: 156 163 tcr1: V19,CASSSRSTGELFF tcr2: V19,CASSTRSTGELFF pval: 2.72682e-07 co_pval: 0.000119204 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 160 161 tcr1: V19,CASSTRSAYEQYF tcr2: V19,CASSTRSSYEQYF pval: 1.13383e-05 co_pval: 0.00625642 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 160 163 tcr1: V19,CASSTRSAYEQYF tcr2: V19,CASSTRSTGELFF pval: 4.82383e-05 co_pval: 0.00416342 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 160 165 tcr1: V19,CASSTRSAYEQYF tcr2: V19,CASSVRSSYEQYF pval: 8.12924e-05 co_pval: 0.052187 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 161 164 tcr1: V19,CASSTRSSYEQYF tcr2: V19,CASSVRSAYEQYF pval: 9.12948e-05 co_pval: 0.0591816 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 161 165 tcr1: V19,CASSTRSSYEQYF tcr2: V19,CASSVRSSYEQYF pval: 9.1154e-05 co_pval: 0.0590827 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 164 165 tcr1: V19,CASSVRSAYEQYF tcr2: V19,CASSVRSSYEQYF pval: 5.90745e-06 co_pval: 0.00311589 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 168 169 tcr1: V20,CSARDATGNGYTF tcr2: V20,CSARDETGNGYTF pval: 5.81929e-05 co_pval: 0.036345 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 168 170 tcr1: V20,CSARDATGNGYTF tcr2: V20,CSARDGTGNGYTF pval: 3.87895e-06 co_pval: 0.00198946 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 168 176 tcr1: V20,CSARDATGNGYTF tcr2: V20,CSARDRTGNGYTF pval: 3.26971e-06 co_pval: 0.00165841 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 169 170 tcr1: V20,CSARDETGNGYTF tcr2: V20,CSARDGTGNGYTF pval: 1.44122e-06 co_pval: 0.000694198 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 169 171 tcr1: V20,CSARDETGNGYTF tcr2: V20,CSARDKTGNGYTF pval: 2.47961e-05 co_pval: 0.014488 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 169 176 tcr1: V20,CSARDETGNGYTF tcr2: V20,CSARDRTGNGYTF pval: 2.93372e-05 co_pval: 0.0173615 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 170 172 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDQTGNGYTF pval: 7.78191e-06 co_pval: 0.00418251 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 170 176 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDRTGNGYTF pval: 4.13425e-09 co_pval: 1.46859e-06 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 170 177 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDRVGNGYTF pval: 4.26914e-05 co_pval: 0.0260112 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 170 178 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDRVGNTIYF pval: 1.15656e-05 co_pval: 0.000213789 tcrdist: 48 tcrdist_pval: 0.00358719
+nbrs: 170 181 tcr1: V20,CSARDGTGNGYTF tcr2: V20,CSARDSTGNGYTF pval: 2.74809e-05 co_pval: 0.0161821 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 171 178 tcr1: V20,CSARDKTGNGYTF tcr2: V20,CSARDRVGNTIYF pval: 1.29594e-05 co_pval: 0.000749876 tcrdist: 42 tcrdist_pval: 0.00115529
+nbrs: 172 176 tcr1: V20,CSARDQTGNGYTF tcr2: V20,CSARDRTGNGYTF pval: 7.47096e-05 co_pval: 0.0476255 tcrdist: 9 tcrdist_pval: 9.0696e-07
+nbrs: 172 177 tcr1: V20,CSARDQTGNGYTF tcr2: V20,CSARDRVGNGYTF pval: 7.08638e-05 co_pval: 0.0449771 tcrdist: 21 tcrdist_pval: 2.88819e-05
+nbrs: 176 177 tcr1: V20,CSARDRTGNGYTF tcr2: V20,CSARDRVGNGYTF pval: 1.66558e-06 co_pval: 0.000809453 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 176 178 tcr1: V20,CSARDRTGNGYTF tcr2: V20,CSARDRVGNTIYF pval: 1.20249e-06 co_pval: 8.03659e-05 tcrdist: 36 tcrdist_pval: 0.000855361
+nbrs: 176 181 tcr1: V20,CSARDRTGNGYTF tcr2: V20,CSARDSTGNGYTF pval: 4.64834e-05 co_pval: 0.0285131 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 177 181 tcr1: V20,CSARDRVGNGYTF tcr2: V20,CSARDSTGNGYTF pval: 6.2703e-05 co_pval: 0.0394001 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 178 183 tcr1: V20,CSARDRVGNTIYF tcr2: V20,CSARVGVGNTIYF pval: 5.24293e-06 co_pval: 0.00274327 tcrdist: 24 tcrdist_pval: 0.000118268
+nbrs: 205 207 tcr1: V29,CSVGAGGTNEKLFF tcr2: V29,CSVGQGGTNEKLFF pval: 9.85796e-07 co_pval: 0.000464029 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 205 209 tcr1: V29,CSVGAGGTNEKLFF tcr2: V29,CSVGTGGTNEKLFF pval: 7.06118e-08 co_pval: 2.87239e-05 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 207 209 tcr1: V29,CSVGQGGTNEKLFF tcr2: V29,CSVGTGGTNEKLFF pval: 1.3786e-06 co_pval: 0.000662229 tcrdist: 12 tcrdist_pval: 8.16502e-06
+nbrs: 208 209 tcr1: V29,CSVGSGGTNEKLFF tcr2: V29,CSVGTGGTNEKLFF pval: 4.90482e-08 co_pval: 1.9586e-05 tcrdist: 9 tcrdist_pval: 9.0696e-07
