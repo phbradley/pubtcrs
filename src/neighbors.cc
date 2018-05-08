@@ -320,12 +320,19 @@ analyze_cluster_occurrences(
 	return diff_Zscore;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main(int argc, char** argv)
 {
 
-	// Wrap everything in a try block.  Do this every time,
-	// because exceptions will be thrown for problems.
 	try {
 
 		TCLAP::CmdLine cmd("Find neighbors (e.g., for clustering) by comparing TCR occurrences "
@@ -341,15 +348,19 @@ int main(int argc, char** argv)
  		TCLAP::ValueArg<int> min_cluster_size_arg("z","min_cluster_size","Minimum cluster size "
 			" for DBSCAN clustering.",
 			false, -1, "unsigned integer", cmd );
+ 		TCLAP::ValueArg<string> min_core_nbrcounts_file_arg("n","min_core_nbrcounts_file","File mapping from number "
+			"of clustered TCRs to min_core_nbrcount values.",
+			false, "", "filename", cmd );
  		TCLAP::ValueArg<int> min_core_nbrcount_arg("m","min_core_nbrcount","Minimum neighbor-number for a TCR "
-			"to be considered a 'core' point for DBSCAN clustering",
+			"to be considered a 'core' point for DBSCAN clustering (aka N_core).",
 			false, -1, "unsigned integer", cmd );
 		TCLAP::SwitchArg cluster_arg("c","cluster","Use nbrs to do DBSCAN clustering", cmd, false);
  		TCLAP::ValueArg<string> feature_mask_arg("f","feature_mask","For subsetting the subjects to be used",
 			false,"","filename",cmd);
  		TCLAP::ValueArg<string> subject_bias_arg("b","subject_bias","For heuristic p-value adjustment",
 			true,"","filename",cmd);
- 		TCLAP::ValueArg<Real> nbr_pval_threshold_arg("p","nbr_pval_threshold","P-value threshold for defining neighbors",
+ 		TCLAP::ValueArg<Real> nbr_pval_threshold_arg("p","nbr_pval_threshold",
+			"P-value threshold for defining neighbors (aka T_sim)",
 			true, Real(1e-4), "double", cmd );
  		TCLAP::ValueArg<string> matrix2_arg("j","matrix2","File containing matrix of TCR occurrences, "
 			"to be compared with matrix1",false,"","filename",cmd);
@@ -378,8 +389,8 @@ int main(int argc, char** argv)
 		bool const do_clustering( cluster_arg.getValue() );
 		bool const write_nbrs_to_stdout( !do_clustering );
 
-		if ( do_clustering && min_core_nbrcount_arg.getValue() < 0 ) {
-			cout << "Please pass --min_core_nbrcount for clustering" << endl;
+		if ( do_clustering && ( min_core_nbrcount_arg.getValue() < 0 && min_core_nbrcounts_file_arg.getValue().empty() ) ) {
+			cout << "Please pass --min_core_nbrcount or --min_core_nbrcounts_file for clustering" << endl;
 			exit(1);
 		}
 		if ( do_clustering && min_cluster_size_arg.getValue() < 0 ) {
@@ -390,8 +401,6 @@ int main(int argc, char** argv)
 			cout << "No need for the --matrix2 arg when clustering (it only uses the matrix1 TCRs)" << endl;
 			exit(1);
 		}
-		Size const min_core_nbrcount( do_clustering ? min_core_nbrcount_arg.getValue() : 0 );
-		Size const min_cluster_size( do_clustering ? min_cluster_size_arg.getValue() : 0 );
 
 		// setup
 		Sizes subjects_subset; // empty is signal to use all subjects
@@ -432,7 +441,7 @@ int main(int argc, char** argv)
 		read_floats_from_file( subject_bias_file, subject_bias_factors ); // whitespace separated
 		runtime_assert( subject_bias_factors.size() == all_occs1.front().size() );
 
-		/// may have to subset everything
+		/// may have to subset the subjects
 		if ( !subjects_subset.empty() ) {
 			sort( subjects_subset.begin(), subjects_subset.end() );
 			foreach_( bools & occs, all_occs1 ) {
@@ -524,10 +533,55 @@ int main(int argc, char** argv)
 
 
 		if ( do_clustering ) {
+
+			Size const min_cluster_size( min_cluster_size_arg.getValue() );
+
+			/// There are two ways to set min_core_nbrcount:
+			///
+			///  --min_core_nbrcount <value>
+			///        or
+			///  --min_core_nbrcounts_file <filename>
+			///
+			///  In the latter case the file has a mapping from number of clustered TCRs to min_core_nbrcount values
+			///
+
+			Size min_core_nbrcount(0);
+			if ( min_core_nbrcount_arg.getValue() >= 0 ) { // passed on cmdline
+				min_core_nbrcount = min_core_nbrcount_arg.getValue();
+			} else { // provided by a file, works for different numbers of clustered tcrs...
+				string const filename( min_core_nbrcounts_file_arg.getValue() );
+				Size const num_clustered_tcrs( all_tcrs1.size() );
+				strings lines;
+				read_lines_from_file( filename, lines );
+				foreach_( string & line, lines ) {
+					istringstream l(line);
+					Size l_num_tcrs, l_min_core_nbrcount;
+					l >> l_num_tcrs >> l_min_core_nbrcount;
+					if ( l.fail() ) {
+						cerr << "parse error " << filename << ' ' << line << endl;
+						exit(1);
+					}
+					if ( l_num_tcrs == num_clustered_tcrs ) {
+						min_core_nbrcount = l_min_core_nbrcount;
+						break;
+					}
+				}
+				if ( !min_core_nbrcount ) {
+					cerr << "Failed to find num_clustered_tcrs (" << num_clustered_tcrs << ") in file " << filename << endl;
+					exit(1);
+				}
+			}
+			runtime_assert( min_core_nbrcount );
+
+
 			/// get rid of the '1' suffix since there is only one set of tcrs/occs anyhow:
 			vector< Sizes > const & all_nbrs( all_nbrs1 );
 			vector< bools > const & all_occs( all_occs1 );
 			strings const & all_tcrs( all_tcrs1 );
+
+			cout << "Clustering " << all_tcrs.size() << " TCRs " <<
+				" min_core_nbrcount= " << min_core_nbrcount <<
+				" nbr_pval_threshold= " << nbr_pval_threshold << endl;
 
 			Sizes centers;
 			vector< Sizes > all_members;
@@ -549,7 +603,7 @@ int main(int argc, char** argv)
 				Size const center( centers[ic] );
 				// for output, cluster numbers are 1-indexed:
 				cout << "cluster: " << ic+1 << " size: " << members.size() << " center: " << all_tcrs[ center ] <<
-					" num_center_nbrs: " << all_nbrs[center].size() << " members: ";
+					" num_center_nbrs: " << all_nbrs[center].size() << " members:";
 				foreach_( Size m, members ) {
 					cout << ' ' << all_tcrs[ m ];
 				}
