@@ -191,7 +191,11 @@ int main(int argc, char** argv)
 		vector<Sizes> all_nbrs1;
 		if ( do_clustering ) all_nbrs1.resize( all_tcrs1.size() );
 
+		cerr << "Finding nbrs: " << all_dtcrs1.size() << " vs " << all_dtcrs2.size() << endl;
 		for ( Size ii=0; ii< all_tcrs1.size(); ++ii ) {
+			// silly status information:
+			if ( (ii+1)%20 == 0 ) cerr << ".";
+			if ( (ii+1)%1000 == 0 ) cerr << ' ' << ii+1 << endl;
 			DistanceTCR_f const & ii_dtcr( all_dtcrs1[ii] );
 			bools const & ii_occs( all_occs1[ii] );
 			for ( Size jj=0; jj< all_tcrs2.size(); ++jj ) {
@@ -233,6 +237,7 @@ int main(int argc, char** argv)
 				}
 			}
 		}
+		cerr << endl;
 
 
 		if ( do_clustering ) {
@@ -248,10 +253,11 @@ int main(int argc, char** argv)
 			/// There are two ways to set min_core_nbrcount:
 			///
 			///  --min_core_nbrcount <value>
-			///        or
-			///  --min_core_nbrcounts_file <filename>
 			///
-			///  In the latter case the file has a mapping from number of clustered TCRs to min_core_nbrcount values
+			///        or
+			///
+			///  from the precomputed database file DBSCAN_params_versus_num_clustered_TCRs_max_2000.txt
+			///    if (similarity_mode, nbr_pval_threshold, and num_clustered_tcrs) match a line in that file
 			///
 
 			Size min_core_nbrcount(0);
@@ -302,6 +308,9 @@ int main(int argc, char** argv)
 			cout << "Clustering " << num_clustered_tcrs << " TCRs " <<
 				" min_core_nbrcount= " << min_core_nbrcount <<
 				" nbr_pval_threshold= " << nbr_pval_threshold << endl;
+			cerr << "Clustering " << num_clustered_tcrs << " TCRs " <<
+				" min_core_nbrcount= " << min_core_nbrcount <<
+				" nbr_pval_threshold= " << nbr_pval_threshold << endl;
 
 			Sizes centers;
 			vector< Sizes > all_members;
@@ -318,6 +327,7 @@ int main(int argc, char** argv)
 			}
 			runtime_assert( fabs( tot - total_subjects )<1e-2 ); // sanity check on normalization
 
+			cerr << "Analyzing " << centers.size() << " DBSCAN clusters." << endl;
 			for ( Size ic=0; ic< centers.size(); ++ic ) {
 				Sizes const & members( all_members[ic] );
 				Size const center( centers[ic] );
@@ -332,8 +342,18 @@ int main(int argc, char** argv)
 				// compute Z_CO score
 				Size const Z_CO_random_repeats(1000);
 				Size upper_tcr_count, lower_tcr_count;
-				analyze_cluster_occurrences( members, all_occs, subjects_subset, subject_sampling_bias, Z_CO_random_repeats, "",
-					upper_tcr_count, lower_tcr_count, cout );
+				Real const Z_CO( analyze_cluster_occurrences( members, all_occs, subjects_subset, subject_sampling_bias,
+						Z_CO_random_repeats, "", upper_tcr_count, lower_tcr_count, cout ) );
+
+				Real const P_size( compute_cluster_size_score( all_nbrs[center].size(), num_clustered_tcrs, similarity_mode,
+						nbr_pval_threshold ) );
+				Real const S_size( sqrt( -1 * log( P_size ) / log (10.) ) );
+
+				cout << "cluster_scores: " << ic+1 << " size: " << members.size() << " center: " << all_tcrs[ center ] <<
+					" num_center_nbrs: " << all_nbrs[center].size() <<
+					" S_size: " << S_size <<
+					" P_size: " << P_size <<
+					" Z_CO: " << Z_CO << endl;
 			}
 		}
 

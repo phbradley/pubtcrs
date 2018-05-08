@@ -32,8 +32,8 @@ echo "# similar)."
 echo
 echo "# Comparing output to expected output (this command should produce no output):"
 echo
-echo "diff <(grep ^cluster expected_output2.txt) <(grep ^cluster test_output2.txt)"
-diff <(grep ^cluster expected_output2.txt) <(grep ^cluster test_output2.txt)
+echo "diff <(grep ^cluster: expected_output2.txt) <(grep ^cluster: test_output2.txt)"
+diff <(grep ^cluster: expected_output2.txt) <(grep ^cluster: test_output2.txt)
 
 echo
 echo "# This command uses the neighbor relationships for DBSCAN clustering and reads DBSCAN "
@@ -52,6 +52,6 @@ echo "# similar)."
 echo
 echo "# Comparing output to expected output (this command should produce no output):"
 echo
-echo "diff <(grep ^cluster expected_output3.txt) <(grep ^cluster test_output3.txt)"
-diff <(grep ^cluster expected_output3.txt) <(grep ^cluster test_output3.txt)
+echo "diff <(grep ^cluster: expected_output3.txt) <(grep ^cluster: test_output3.txt)"
+diff <(grep ^cluster: expected_output3.txt) <(grep ^cluster: test_output3.txt)
 
