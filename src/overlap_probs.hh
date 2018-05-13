@@ -1,5 +1,8 @@
-#ifndef INCLUDED_tcrdist_cxx_overlap_probs_HH
-#define INCLUDED_tcrdist_cxx_overlap_probs_HH
+//  Routines for computing p-values of occurrence overlaps using the hypergeometric distribution
+//
+
+#ifndef INCLUDED_overlap_probs_HH
+#define INCLUDED_overlap_probs_HH
 
 #include "misc.hh"
 #include <boost/math/distributions/hypergeometric.hpp>

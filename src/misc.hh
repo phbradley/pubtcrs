@@ -1,5 +1,8 @@
-#ifndef INCLUDED_tcrdist_cxx_misc_HH
-#define INCLUDED_tcrdist_cxx_misc_HH
+// Miscellaneous generic helper functions
+//
+
+#ifndef INCLUDED_misc_HH
+#define INCLUDED_misc_HH
 
 #include "types.hh"
 
@@ -11,11 +14,8 @@
 // mutable global state is bad
 
 namespace misc {
-
 string dbdir;
-
 }
-
 
 void
 set_dbdir(
@@ -26,16 +26,6 @@ set_dbdir(
 	if ( misc::dbdir.back() != '/' ) misc::dbdir += "/";
 }
 
-
-
-Real
-uniform()
-{
-	static std::random_device rd;  //Will be used to obtain a seed for the random number engine
-	static std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
-	static std::uniform_real_distribution<> dis(0.0,1.0);
-	return dis(gen);
-}
 
 
 void

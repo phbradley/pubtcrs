@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 			"./db/","path",cmd);
 
  		TCLAP::ValueArg<Real> min_pval_threshold_arg("q","min_pval_threshold","P-value threshold for writing out the "
-			"*best* TCR-feature correlation for each TCR",false,1,"double",cmd);
+			"*best* TCR-feature correlation for each TCR",false,0,"double",cmd);
 
  		TCLAP::ValueArg<Real> pval_threshold_arg("p","pval_threshold","P-value threshold for writing out a "
 			"TCR-feature correlation",true,0,"double",cmd);

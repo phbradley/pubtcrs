@@ -1,5 +1,8 @@
-#ifndef INCLUDED_tcrdist_cxx_types_HH
-#define INCLUDED_tcrdist_cxx_types_HH
+// some "useful" typedefs and simple classes
+//
+
+#ifndef INCLUDED_types_HH
+#define INCLUDED_types_HH
 
 
 #include <boost/foreach.hpp>
@@ -26,7 +29,6 @@ typedef double  Real;
 typedef std::pair< Size, Size > SizePair;
 
 typedef vector< SizePair > SizePairs;
-//typedef vector< int > ints;
 typedef vector< string > strings;
 typedef vector< Size > Sizes;
 typedef vector< bool > bools;

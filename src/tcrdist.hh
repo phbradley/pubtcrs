@@ -1,19 +1,28 @@
-#ifndef INCLUDED_tcrdist_cxx_tcrdist_HH
-#define INCLUDED_tcrdist_cxx_tcrdist_HH
+// Code for computing TCRdist distances
+//
+
+#ifndef INCLUDED_tcrdist_HH
+#define INCLUDED_tcrdist_HH
 
 #include "misc.hh"
 
+// struct to hold information on a single TCR that is needed to quickly compute TCRdist
+// V-gene level data
 struct DistanceTCR_g {
 	Size v_num;
 	string cdr3; // from C to 'F'
 };
 
 
+// struct to hold information on a single TCR that is needed to quickly compute TCRdist
+// V-family level data
 struct DistanceTCR_f {
 	Size vfam_num;
 	string cdr3; // from C to 'F'
 };
 
+// struct to hold information on a single TCR that is needed to quickly compute TCRdist
+// allows for multiple V-genes
 struct DistanceTCR_gs {
 	Sizes v_nums;
 	string cdr3; // from C to 'F'
@@ -34,7 +43,7 @@ public:
 	create_distance_tcr_gs( strings const & v_genes, string const & cdr3 ) const;
 
 	DistanceTCR_f
-	create_distance_tcr_f( string const & tcr ) const; // tcr looks like "V07,CASSIRSSAYEQFF"
+	create_distance_tcr_f( string const & tcr ) const; // tcr looks like "V19,CASSIRSSAYEQFF"
 
 	DistanceTCR_f
 	create_distance_tcr_f( string const & v_family, string const & cdr3 ) const;

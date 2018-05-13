@@ -1,5 +1,11 @@
-#ifndef INCLUDED_pubtcrs_dbscan_HH
-#define INCLUDED_pubtcrs_dbscan_HH
+// Simple DBSCAN implementation
+//
+// adapted from Ester M, Kriegel HP, Sander J, Xu X. A Density-based Algorithm for Discovering Clusters a Density-based Algorithm for Discovering Clusters in Large Spatial Databases with Noise. In: Proceedings of the Second International Conference on Knowledge Discovery and Data Mining KDD’96, Portland, Oregon: AAAI Press; 1996. p. 226–231. http://dl.acm.org/citation.cfm?id=3001460.3001507.
+//
+
+
+#ifndef INCLUDED_dbscan_HH
+#define INCLUDED_dbscan_HH
 
 #include "types.hh"
 

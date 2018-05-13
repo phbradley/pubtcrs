@@ -1,5 +1,8 @@
-#ifndef INCLUDED_tcrdist_cxx_io_HH
-#define INCLUDED_tcrdist_cxx_io_HH
+// some input/output routines
+//
+
+#ifndef INCLUDED_io_HH
+#define INCLUDED_io_HH
 
 #include "misc.hh"
 
