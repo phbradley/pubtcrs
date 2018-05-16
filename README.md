@@ -39,4 +39,5 @@ cd test/
 ```
 
 # DOCKER
-An automatic Docker build is available at <https://hub.docker.com/r/pbradley/pubtcrs/>
+An automatic Docker build is available at <https://hub.docker.com/r/pbradley/pubtcrs/>, and a nice mini-intro to Docker [here](http://erick.matsen.org/2018/04/19/docker.html).
+
