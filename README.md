@@ -1,8 +1,12 @@
 # pubtcrs
 
+<a href="https://hub.docker.com/r/pbradley/pubtcrs/">
+  <img src="https://img.shields.io/docker/build/pbradley/pubtcrs.svg" alt="Docker Build Status">
+</a>
+
 This repository contains C++ source code for the TCR clustering and correlation analyses described in the manuscript "Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity" by William S DeWitt III, Anajane Smith, Gary Schoch, John A Hansen, Frederick A Matsen IV and Philip Bradley.
 
-At the moment (version 0.1), the code is specialized for beta-chain repertoire analysis and uses a TCR representation that includes the V-gene family and the CDR3 sequence (for example, "V19,CASSIRSSYEQYF"). We plan on extending to the alpha chain and adding other TCR representations in the future. 
+At the moment (version 0.1), the code is specialized for beta-chain repertoire analysis and uses a TCR representation that includes the V-gene family and the CDR3 sequence (for example, "V19,CASSIRSSYEQYF"). We plan on extending to the alpha chain and adding other TCR representations in the future.
 
 - `pgen` computes TCR generation probabilities.
 
@@ -16,11 +20,11 @@ At the moment (version 0.1), the code is specialized for beta-chain repertoire a
 
 This software depends on header files included with the BOOST C++ library. You can download the library here:
 
-https://www.boost.org/users/download/
+<https://www.boost.org/users/download/>
 
 # COMPILING
 
-Edit the "BOOSTDIR" line in the Makefile to point to the location where your BOOST download is installed. Then type `make`. The binary executable files will be placed in the `bin/` directory. 
+Edit the "BOOSTDIR" line in the Makefile to point to the location where your BOOST download is installed. Then type `make`. The binary executable files will be placed in the `bin/` directory.
 
 # THANKS
 
