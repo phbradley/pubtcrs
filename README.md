@@ -38,3 +38,5 @@ cd test/
 ./runall.bash
 ```
 
+# DOCKER
+An automatic Docker build is available at <https://hub.docker.com/r/pbradley/pubtcrs/>
