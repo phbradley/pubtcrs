@@ -49,9 +49,17 @@ int main(int argc, char** argv)
 
 		string line, tcr;
 		bools tcr_occs;
+		Size const dotequals(50000);
+		cerr << "\nFinding correlations for the TCRs in " << matrix_filename << "\nEach '.' represents " <<
+			dotequals << " TCRs" << endl;
 
+		Size counter(0);
 		while ( getline( data, line ) ) {
 			if ( parse_matrix_line( line, tcr, tcr_occs ) ) {
+				// some silly status info
+				++counter;
+				if ( (counter+1)%dotequals == 0 ) cerr << ".";
+				if ( (counter+1)%(50*dotequals) == 0 ) cerr << ' ' << counter+1 << endl;
 				string best_line;
 				Real best_pval( 10 );
 				foreach_( Feature const & f, features ) {
@@ -101,6 +109,7 @@ int main(int argc, char** argv)
 				}
 			} // parse success
 		} //getline
+		cerr << ' ' << counter << endl;
 		data.close();
 
 	} catch (TCLAP::ArgException &e)  // catch any exceptions
