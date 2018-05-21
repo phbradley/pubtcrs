@@ -19,7 +19,8 @@ int main(int argc, char** argv)
 			"If --feature_mask argument is provided, the subjects used for neighbors/clustering will be the intersection "
 			"of the positive subject sets for all the features in the provided file. Otherwise all the subjects will "
 			"be used. If the --cluster flag is used, DBSCAN clustering will be performed using the identified "
-			"neighbor relationships.", ' ', "0.1");
+			"neighbor relationships.\nIf similarity_mode==3, occurrence matrices and subject_bias are not "
+			"required; instead the --tcrs argument can be used to pass a file containing the TCR sequences.", ' ', "0.1");
 
 		// path to database files
  		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
@@ -38,18 +39,22 @@ int main(int argc, char** argv)
  		TCLAP::ValueArg<string> feature_mask_arg("f","feature_mask","For subsetting the subjects to be used",
 			false,"","filename",cmd);
 
- 		TCLAP::ValueArg<string> subject_bias_arg("b","subject_bias","For heuristic p-value adjustment",
-			true,"","filename",cmd);
+ 		TCLAP::ValueArg<string> subject_bias_arg("b","subject_bias","For heuristic p-value adjustment. "
+			"Required if similarity_mode is 1 or 2",
+			false,"","filename",cmd);
 
  		TCLAP::ValueArg<Real> nbr_pval_threshold_arg("p","nbr_pval_threshold",
 			"P-value threshold for defining neighbors (aka T_sim)",
 			false, 0.0, "double", cmd );
 
+ 		TCLAP::ValueArg<string> tcrs_arg("t","tcrs","File containing TCRs for neighbors/clustering, "
+			" can be used if similarity_mode==3 (since occurence matrices are not required).",false,"","filename",cmd);
+
  		TCLAP::ValueArg<string> matrix2_arg("j","matrix2","File containing matrix of TCR occurrences, "
 			"to be compared with matrix1",false,"","filename",cmd);
 
  		TCLAP::ValueArg<string> matrix1_arg("i","matrix1","File containing matrix of TCR occurrences, "
-			"to be compared with matrix2 (or self if matrix2 is not provided)",true,"","filename",cmd);
+			"to be compared with matrix2 (or self if matrix2 is not provided)",false,"","filename",cmd);
 
 		Sizes allowed_similarity_modes( make_vector(Size(1),Size(2),Size(3)) );
 		TCLAP::ValuesConstraint<Size> similarity_mode_arg_cst(allowed_similarity_modes);
@@ -66,6 +71,7 @@ int main(int argc, char** argv)
 		Size const similarity_mode( similarity_mode_arg.getValue() );
 		string const matrix_file1( matrix1_arg.getValue() );
 		string const matrix_file2( matrix2_arg.getValue() );
+		string const tcrs_file( tcrs_arg.getValue() );
 		string const subject_bias_file( subject_bias_arg.getValue() );
 		string const feature_file( feature_mask_arg.getValue() );
 		Real nbr_pval_threshold( nbr_pval_threshold_arg.getValue() );
@@ -122,7 +128,20 @@ int main(int argc, char** argv)
 
 		vector< bools > all_occs1, all_occs2;
 		strings all_tcrs1, all_tcrs2;
-		read_matrix_file( matrix_file1, all_occs1, all_tcrs1 );
+		if ( !matrix_file1.empty() ) {
+			read_matrix_file( matrix_file1, all_occs1, all_tcrs1 );
+		} else {
+			if ( similarity_mode == 1 || similarity_mode == 2 ) {
+				cerr << "At least one occurrence matrix is needed to compute neighbors: similarity_mode= " << similarity_mode <<
+					endl;
+				exit(1);
+			}
+			if ( tcrs_file.empty() ) {
+				cerr << "Need --tcrs file if no matrix file is given" << endl;
+				exit(1);
+			}
+			read_tcrs_from_file( tcrs_file, all_tcrs1 );
+		}
 
 		if ( !self_nbrs ) {
 			read_matrix_file( matrix_file2, all_occs2, all_tcrs2 );
@@ -131,43 +150,45 @@ int main(int argc, char** argv)
 		}
 
 		Reals subject_bias_factors;
-		read_floats_from_file( subject_bias_file, subject_bias_factors ); // whitespace separated
-		runtime_assert( subject_bias_factors.size() == all_occs1.front().size() );
+		if ( similarity_mode == 1 || similarity_mode == 2 ) {
+			read_floats_from_file( subject_bias_file, subject_bias_factors ); // whitespace separated
+			runtime_assert( subject_bias_factors.size() == all_occs1.front().size() );
 
-		/// may have to subset the subjects
-		if ( !subjects_subset.empty() ) {
-			sort( subjects_subset.begin(), subjects_subset.end() );
-			foreach_( bools & occs, all_occs1 ) {
-				bools new_occs;
-				foreach_( Size s, subjects_subset ) new_occs.push_back( occs[s] );
-				occs.swap( new_occs );
-			}
-
-			if ( !self_nbrs ) {
-				foreach_( bools & occs, all_occs2 ) {
+			/// may have to subset the subjects
+			if ( !subjects_subset.empty() ) {
+				sort( subjects_subset.begin(), subjects_subset.end() );
+				foreach_( bools & occs, all_occs1 ) {
 					bools new_occs;
 					foreach_( Size s, subjects_subset ) new_occs.push_back( occs[s] );
 					occs.swap( new_occs );
 				}
-			}
+
+				if ( !self_nbrs ) {
+					foreach_( bools & occs, all_occs2 ) {
+						bools new_occs;
+						foreach_( Size s, subjects_subset ) new_occs.push_back( occs[s] );
+						occs.swap( new_occs );
+					}
+				}
 
 
-			Reals new_bias_factors;
-			foreach_( Size s, subjects_subset ) new_bias_factors.push_back( subject_bias_factors[s] );
-			subject_bias_factors.swap( new_bias_factors );
-		} else {
-			// fake subset info for clustering
-			for ( Size i=0; i< subject_bias_factors.size(); ++i ) {
-				subjects_subset.push_back( i );
+				Reals new_bias_factors;
+				foreach_( Size s, subjects_subset ) new_bias_factors.push_back( subject_bias_factors[s] );
+				subject_bias_factors.swap( new_bias_factors );
+			} else {
+				// fake subset info for clustering
+				for ( Size i=0; i< subject_bias_factors.size(); ++i ) {
+					subjects_subset.push_back( i );
+				}
 			}
 		}
 
-		Size const total_subjects( all_occs1.front().size() );
+		Size const total_subjects( all_occs1.empty() ? 0 : all_occs1.front().size() );
 		runtime_assert( subject_bias_factors.size() == total_subjects );
 		runtime_assert( total_subjects == subjects_subset.size() );
 
 		/// normalize subject_bias_factors
-		{
+		if ( similarity_mode == 1 || similarity_mode == 2 ) {
 			Real avg(0);
 			foreach_( Real f, subject_bias_factors ) {
 				runtime_assert( f>=0 );
@@ -196,24 +217,28 @@ int main(int argc, char** argv)
 			// silly status information:
 			if ( (ii+1)%20 == 0 ) cerr << ".";
 			if ( (ii+1)%1000 == 0 ) cerr << ' ' << ii+1 << endl;
-			DistanceTCR_f const & ii_dtcr( all_dtcrs1[ii] );
-			bools const & ii_occs( all_occs1[ii] );
 			for ( Size jj=0; jj< all_tcrs2.size(); ++jj ) {
 				if ( self_nbrs && jj<=ii ) continue;
 
-				bools const & jj_occs( self_nbrs ? all_occs1[jj] : all_occs2[jj] );
-
 				Real co_pval(1), tcrd(0), tcrdist_pval(1), combined_pval(1);
-				if ( similarity_mode ==1 ) {
-					combined_pval = co_pval = compute_overlap_pvalue_with_bias( ii_occs, jj_occs, subject_bias_factors );
-				} else if ( similarity_mode == 2 ) {
-					co_pval = compute_overlap_pvalue_with_bias( ii_occs, jj_occs, subject_bias_factors );
-					tcrd = tcrdist( ii_dtcr, all_dtcrs2[jj] );
-					tcrdist_pval = tcrdist.prob_equal_or_smaller_tcrdist( tcrd );
-					combined_pval = product_cdf( max( min_tcrdist_pval, tcrdist_pval ) * co_pval );
+				if ( similarity_mode ==1 || similarity_mode == 2 ) {
+					bools const & ii_occs( all_occs1[ii] );
+					bools const & jj_occs( self_nbrs ? all_occs1[jj] : all_occs2[jj] );
+					if ( similarity_mode == 1 ) {
+						combined_pval = co_pval = compute_overlap_pvalue_with_bias( ii_occs, jj_occs, subject_bias_factors );
+					} else {
+						runtime_assert( similarity_mode == 2 );
+						co_pval = compute_overlap_pvalue_with_bias( ii_occs, jj_occs, subject_bias_factors );
+						tcrd = tcrdist( all_dtcrs1[ii], all_dtcrs2[jj] );
+						tcrdist_pval = tcrdist.prob_equal_or_smaller_tcrdist( tcrd );
+						combined_pval = product_cdf( max( min_tcrdist_pval, tcrdist_pval ) * co_pval );
+					}
 				} else if ( similarity_mode == 3 ) {
-					tcrd = tcrdist( ii_dtcr, all_dtcrs2[jj] );
+					tcrd = tcrdist( all_dtcrs1[ii], all_dtcrs2[jj] );
 					combined_pval = tcrdist_pval = tcrdist.prob_equal_or_smaller_tcrdist( tcrd );
+				} else {
+					cerr << "Bad similarity_mode: " << similarity_mode << endl;
+					exit(1);
 				}
 
 				if ( combined_pval <= nbr_pval_threshold ) {
@@ -320,12 +345,14 @@ int main(int argc, char** argv)
 
 			/// fill probability array for choosing each subject during resampling (for Z_CO score calc)
 			Reals subject_sampling_bias;
-			Real tot(0);
-			foreach_( Real f, subject_bias_factors ) {
-				subject_sampling_bias.push_back( f/total_subjects );
-				tot += f;
+			if ( total_subjects ) {
+				Real tot(0);
+				foreach_( Real f, subject_bias_factors ) {
+					subject_sampling_bias.push_back( f/total_subjects );
+					tot += f;
+				}
+				runtime_assert( fabs( tot - total_subjects )<1e-2 ); // sanity check on normalization
 			}
-			runtime_assert( fabs( tot - total_subjects )<1e-2 ); // sanity check on normalization
 
 			cerr << "Analyzing " << centers.size() << " DBSCAN clusters." << endl;
 			for ( Size ic=0; ic< centers.size(); ++ic ) {
@@ -339,21 +366,23 @@ int main(int argc, char** argv)
 				}
 				cout << endl;
 
-				// compute Z_CO score
-				Size const Z_CO_random_repeats(1000);
-				Size upper_tcr_count, lower_tcr_count;
-				Real const Z_CO( analyze_cluster_occurrences( members, all_occs, subjects_subset, subject_sampling_bias,
-						Z_CO_random_repeats, "", upper_tcr_count, lower_tcr_count, cout ) );
+				if ( total_subjects ) {
+					// compute Z_CO score
+					Size const Z_CO_random_repeats(1000);
+					Size upper_tcr_count, lower_tcr_count;
+					Real const Z_CO( analyze_cluster_occurrences( members, all_occs, subjects_subset, subject_sampling_bias,
+							Z_CO_random_repeats, "", upper_tcr_count, lower_tcr_count, cout ) );
 
-				Real const P_size( compute_cluster_size_score( all_nbrs[center].size(), num_clustered_tcrs, similarity_mode,
-						nbr_pval_threshold ) );
-				Real const S_size( sqrt( -1 * log( P_size ) / log (10.) ) );
+					Real const P_size( compute_cluster_size_score( all_nbrs[center].size(), num_clustered_tcrs, similarity_mode,
+							nbr_pval_threshold ) );
+					Real const S_size( sqrt( -1 * log( P_size ) / log (10.) ) );
 
-				cout << "cluster_scores: " << ic+1 << " size: " << members.size() << " center: " << all_tcrs[ center ] <<
-					" num_center_nbrs: " << all_nbrs[center].size() <<
-					" S_size: " << S_size <<
-					" P_size: " << P_size <<
-					" Z_CO: " << Z_CO << endl;
+					cout << "cluster_scores: " << ic+1 << " size: " << members.size() << " center: " << all_tcrs[ center ] <<
+						" num_center_nbrs: " << all_nbrs[center].size() <<
+						" S_size: " << S_size <<
+						" P_size: " << P_size <<
+						" Z_CO: " << Z_CO << endl;
+				}
 			}
 		}
 
