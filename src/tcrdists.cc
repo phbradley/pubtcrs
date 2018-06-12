@@ -57,16 +57,18 @@ compute_distances(
 		for ( Size jj=0; jj< f2_tcrs.size(); ++jj ) {
 			Real const dist( tcrdist(f1_dtcrs[ii], f2_dtcrs[jj]) );
 			cout << ' ' << dist;
-			if ( !self_distances || ii!=jj ) dists.push_back( dist );
+			dists.push_back( dist ); // could include 0 for ii==jj if self_distances
 		}
 		cout << '\n';
-		if ( !self_distances ) runtime_assert( dists.size() == f2_tcrs.size() );
-		sort( dists.begin(), dists.end() ); // now in increasing order
 
-		cout << "NNDIST tcr1_index: " << ii << " tcr1: " << f1_tcrs[ii] <<
-			" nndistance_10P_wrt_file2_tcrs: " << F(9,3,compute_NNdistance_nosorting( dists )) << endl;
+		if ( !self_distances ) {
+			sort( dists.begin(), dists.end() ); // now in increasing order
+
+			cout << "NNDIST tcr1_index: " << ii << " tcr1: " << f1_tcrs[ii] <<
+				" mindist_to_file2_tcrs: " << F(9,3,dists.front()) <<
+				" nndistance_10P_wrt_file2_tcrs: " << F(9,3,compute_NNdistance_nosorting( dists )) << endl;
+		}
 	}
-
 }
 
 
