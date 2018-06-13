@@ -37,6 +37,9 @@ public:
 
 	// do error checking inside here:
 	DistanceTCR_g
+	create_distance_tcr_g( string const & tcr ) const; // tcr looks like "TRBV19*01,CASSIRSSAYEQFF"
+
+	DistanceTCR_g
 	create_distance_tcr_g( string const & v_gene, string const & cdr3 ) const;
 
 	DistanceTCR_gs
@@ -378,6 +381,17 @@ TCRdistCalculator::create_distance_tcr_g(
 	dtcr.cdr3 = cdr3;
 
 	return dtcr;
+}
+
+DistanceTCR_g
+TCRdistCalculator::create_distance_tcr_g(
+	string const & tcr
+) const
+{
+	strings const l( split_to_vector( tcr, "," ) );
+	runtime_assert( l.size() == 2 );
+
+	return create_distance_tcr_g( l[0], l[1] );
 }
 
 DistanceTCR_gs
