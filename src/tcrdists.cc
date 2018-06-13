@@ -116,32 +116,31 @@ int main(int argc, char** argv)
 		char tcr_chain( 'B' ); // the default
 
 		{ // hacky stuff here
-			string const first_tcr( f1_tcrs.front() );
-			if ( first_tcr[0] == 'V' ) {
+			string const random_tcr( f1_tcrs[ f1_tcrs.size()/2 ] ); // the first could be a csv header, for example
+			if ( random_tcr[0] == 'V' ) {
 				by_family = true;
-				// sanity checking:
-				foreach_( string tcr, f1_tcrs ) {
-					runtime_assert( tcr[0] == 'V' && tcr[3] == ',' && split_to_vector(tcr,",").size() == 2 );
-				}
-				foreach_( string tcr, f2_tcrs ) {
-					runtime_assert( tcr[0] == 'V' && tcr[3] == ',' && split_to_vector(tcr,",").size() == 2 );
-				}
 			} else {
 				by_family = false; // full allele-level gene information
-				runtime_assert( first_tcr.substr(0,2) == "TR" );
-				tcr_chain = first_tcr[2];
-				// sanity checking:
-				runtime_assert( string("AB").find(tcr_chain) != string::npos );
-				foreach_( string tcr, f1_tcrs ) {
-					runtime_assert( tcr.substr(0,2) == "TR" && tcr[2] == tcr_chain && split_to_vector(tcr,",").size() == 2 );
-				}
-				foreach_( string tcr, f2_tcrs ) {
-					runtime_assert( tcr.substr(0,2) == "TR" && tcr[2] == tcr_chain && split_to_vector(tcr,",").size() == 2 );
-				}
+				runtime_assert( random_tcr.substr(0,2) == "TR" );
+				tcr_chain = random_tcr[2];
 			}
 		} // scope for io checking
 
 		TCRdistCalculator tcrdist( tcr_chain ); // after calling set_dbdir, and tcr_chain determined
+
+		for ( int i=f1_tcrs.size()-1; i>=0; --i ) {
+			if ( !tcrdist.check_tcr_string_ok( f1_tcrs[i] ) ) {
+				cout << "[WARNING] bad file1 tcr: " << i << ' ' << f1_tcrs[i] << endl;
+				f1_tcrs.erase( f1_tcrs.begin()+i );
+			}
+		}
+		for ( int i=f2_tcrs.size()-1; i>=0; --i ) {
+			if ( !tcrdist.check_tcr_string_ok( f2_tcrs[i] ) ) {
+				cout << "[WARNING] bad file2 tcr: " << i << ' ' << f2_tcrs[i] << endl;
+				f2_tcrs.erase( f2_tcrs.begin()+i );
+			}
+		}
+
 
 		if ( by_family ) {
 			vector< DistanceTCR_f > f1_dtcrs, f2_dtcrs;

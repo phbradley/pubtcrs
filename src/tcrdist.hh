@@ -84,6 +84,13 @@ public:
 	Real
 	prob_equal_or_smaller_tcrdist( Real const dist ) const;
 
+	// returns true if cdr3 is OK
+	bool
+	check_cdr3_ok( string const & cdr3 ) const;
+
+	// returns true if tcr string is OK
+	bool
+	check_tcr_string_ok( string const & tcr ) const;
 
 private:
 	char const ab_;
@@ -252,6 +259,37 @@ TCRdistCalculator::TCRdistCalculator(
 
 
 }
+
+// returns true if OK
+bool
+TCRdistCalculator::check_cdr3_ok( string const & cdr3 ) const
+{
+	foreach_( char const aa, cdr3 ) {
+		if ( amino_acids_.find(aa) == string::npos ) return false;
+	}
+	if ( cdr3.size() <= 5 ) return false;
+	return true;
+}
+
+
+
+
+/// should be like V19,CASSIRSSYEQYF or TRBV19*01,CASSIRSSYEQYF
+bool
+TCRdistCalculator::check_tcr_string_ok( string const & tcr ) const
+{
+	strings const l( split_to_vector(tcr,",") );
+	if ( l.size() != 2 ) return false;
+	string const v( l[0] ), cdr3( l[1] );
+
+	if ( v.size() == 3 && v[0] == 'V' ) { // vfam
+		if ( v_family2vfam_num_.count(v) == 0 ) return false;
+	} else { // v-gene
+		if ( v_gene2v_num_.count(v) == 0 ) return false;
+	}
+	return check_cdr3_ok( cdr3 );
+}
+
 
 inline
 Real
