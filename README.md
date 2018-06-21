@@ -6,7 +6,7 @@
 
 This repository contains C++ source code for the TCR clustering and correlation analyses described in the manuscript "Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity" by William S DeWitt III, Anajane Smith, Gary Schoch, John A Hansen, Frederick A Matsen IV and Philip Bradley, available on [bioRxiv](https://www.biorxiv.org/content/early/2018/05/02/313106).
 
-At the moment (version 0.1), the code is specialized for beta-chain repertoire analysis and uses a TCR representation that includes the V-gene family and the CDR3 sequence (for example, "V19,CASSIRSSYEQYF"). We plan on extending to the alpha chain and adding other TCR representations in the future.
+At the moment (version 0.1), the code is specialized for beta-chain repertoire analysis and uses a TCR representation that includes the V-gene family and the CDR3 sequence (for example, "V19,CASSIRSSYEQYF"). We plan on extending to the alpha chain and adding other TCR representations in the future. (Actually, now we've started doing that, for the `pgen` and `tcrdists` executables so far). 
 
 - `pgen` computes TCR generation probabilities.
 
@@ -15,6 +15,8 @@ At the moment (version 0.1), the code is specialized for beta-chain repertoire a
 - `neighbors` computes TCR-TCR neighbor relations based on co-occurrence and sequence similarity. It can also perform DBSCAN clustering if desired.
 
 - `correlations` computes TCR-feature correlation p-values for user-defined features.
+
+Usage examples can be found in the shell scripts: `tests/*/run.bash`
 
 # REQUIREMENTS
 

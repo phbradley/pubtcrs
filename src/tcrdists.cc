@@ -78,7 +78,11 @@ int main(int argc, char** argv)
 	try { // to catch tclap exceptions
 
 		TCLAP::CmdLine cmd( "Calculate TCRdist distances between TCRs in one file or between two files "
-			"(for example, annotation TCRs versus public TCRs).", ' ', "0.1" );
+			"(for example, annotation TCRs versus public TCRs). The TCRs can be defined at the V-beta family "
+			"level (e.g. V19,CASSIRSSYEQYF) or the V-allele level (e.g. TRBV19*01,CASSIRSSYEQYF or "
+			"TRAV3*01,CAVPPDSWGKLQF). If two files are provided, NN-distance scores for the TCRs in the "
+			"first file will be computed with respect to the repertoire of TCR chains in the second file.",
+			' ', "0.1" );
 
 		// path to database files
  		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
