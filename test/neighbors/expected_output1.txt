@@ -1,7 +1,4 @@
-Read new feature: HLA-A*02:01 num_positives: 268 num_negatives: 361
-Read new feature: GOOD num_positives: 542 num_negatives: 124
 final_subjects_subset: 218
-start reading example1_matrix.txt
 nbrs: 2 3 tcr1: V02,CASSIGEAFF tcr2: V02,CASSLGEAFF pval: 2.99629e-08 co_pval: 1.16754e-05 tcrdist: 6 tcrdist_pval: 2.66706e-07
 nbrs: 2 4 tcr1: V02,CASSIGEAFF tcr2: V02,CASSVGEAFF pval: 2.14916e-06 co_pval: 0.00106123 tcrdist: 3 tcrdist_pval: 7.43929e-08
 nbrs: 3 4 tcr1: V02,CASSLGEAFF tcr2: V02,CASSVGEAFF pval: 2.88589e-09 co_pval: 1.009e-06 tcrdist: 9 tcrdist_pval: 9.0696e-07

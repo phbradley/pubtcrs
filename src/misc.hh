@@ -15,6 +15,22 @@
 
 namespace misc {
 string dbdir;
+bool verbose_(false);
+}
+
+inline
+bool
+verbose()
+{
+	return misc::verbose_;
+}
+
+void
+set_verbose(
+	bool const setting
+)
+{
+	misc::verbose_ = setting;
 }
 
 void

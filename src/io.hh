@@ -34,7 +34,7 @@ read_fasta(
 		strings const l( split_to_vector(line) );
 		if ( line[0] == '>' ) {
 			id = l[0].substr(1);
-			cout << "read_fasta: " << id << ' ' << filename <<endl;
+			if ( verbose() ) cout << "read_fasta: " << id << ' ' << filename <<endl;
 			all_fasta[id];
 		} else {
 			all_fasta[id] += l[0];
@@ -60,7 +60,7 @@ read_fasta_and_info(
 			id = l[0].substr(1);
 			all_fasta[id];
 			all_info[id] = l[1];
-			cout << "read_fasta: " << id << " info: " << l[1] << ' ' << filename <<endl;
+			if ( verbose() ) cout << "read_fasta: " << id << " info: " << l[1] << ' ' << filename <<endl;
 		} else {
 			all_fasta[id] += l[0];
 		}
@@ -144,14 +144,14 @@ read_matrix_file(
 {
 	all_occs.reserve( 100000 );
 
-	cout << "start reading " << filename << endl;
+	if ( verbose() ) cout << "start reading " << filename << endl;
 	ifstream data( filename.c_str() );
 	check_file( data, filename );
 	string line;
 	Size line_number(0);
 	while ( getline(data,line) ) {
 		++line_number;
-		if ( line_number%1000000 == 0 ) cout << "read file " << filename << ' ' << line_number << endl;
+		if ( line_number%1000000 == 0 && verbose() ) cout << "read file " << filename << ' ' << line_number << endl;
 		bools occs;
 		string tcr;
 		if ( parse_matrix_line( line, tcr, occs ) ) { // success
@@ -198,8 +198,8 @@ read_features(
 				f.neglist.push_back(isub);
 			}
 			features.push_back(f);
-			cout << "Read new feature: " << f.name << " num_positives: " << f.poslist.size() <<
-				" num_negatives: " << f.neglist.size() << endl;
+			if ( verbose() ) cout << "Read new feature: " << f.name << " num_positives: " << f.poslist.size() <<
+												 " num_negatives: " << f.neglist.size() << endl;
 		}
 	}
 }

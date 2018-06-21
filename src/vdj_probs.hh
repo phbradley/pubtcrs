@@ -1144,7 +1144,7 @@ JunctionCounts::read_probs_and_counts_from_file(
 	bool const save_old_counts = false
 )
 {
-	cout << "JunctionCounts::read_probs_and_counts_from_file: " << filename << endl;
+	if ( verbose() ) cout << "JunctionCounts::read_probs_and_counts_from_file: " << filename << endl;
 	ifstream data( filename.c_str() );
 
 	if ( !save_old_counts ) initialize_counts_and_probs_arrays();
@@ -1448,8 +1448,6 @@ JunctionCounts::calc_ndn_nucseq_probability_given_j_gene(
 	vector< Real > const & j_probs_by_prefix // j_prefix is reverse-complemented wrt ndn_nucseq
 ) const
 {
-	bool const verbose( false ); //TR.Trace.visible());
-
 	Size const sz_alpha( alphabet_.size() );
 	runtime_assert( v_probs_by_prefix.size() == sz_alpha );
 	runtime_assert( j_probs_by_prefix.size() == sz_alpha );
@@ -1478,8 +1476,8 @@ JunctionCounts::calc_ndn_nucseq_probability_given_j_gene(
 			prob_j += j_probs_by_prefix[j_prefix] * nucseq_probability( j_insert, alphabet_[ j_prefix ] );
 		}
 		prob += (1-d_success_rate_) * prob_v * prob_j * vj_insert_probs_[ ndn_len ];
-		if ( verbose ) cout << "prob_no_D: " << prob << ' ' << prob_v << ' ' << prob_j << ' ' <<
-										 vj_insert_probs_[ndn_len] << endl;
+		if ( verbose() ) cout << "prob_no_D: " << prob << ' ' << prob_v << ' ' << prob_j << ' ' <<
+											 vj_insert_probs_[ndn_len] << endl;
 	}
 
 	// add prob that there was a D
@@ -1539,7 +1537,7 @@ JunctionCounts::calc_ndn_nucseq_probability_given_j_gene(
 											trim_probs[ base_d0_trim+extra_d0_trim ][ base_d1_trim+extra_d1_trim ] *
 											dj_insert_probs_[ base_dj_insert + extra_d1_trim ] );
 									prob_with_this_d += prob_with_these_trims;
-									if ( verbose ) {
+									if ( verbose() ) {
 										cout << "trims_prob: " << prob_with_these_trims <<
 											" align_len: " << al.length() <<
 											" base_trims: " << base_d0_trim << ' ' << base_d1_trim <<
@@ -1557,7 +1555,7 @@ JunctionCounts::calc_ndn_nucseq_probability_given_j_gene(
 				} // choose_tie
 			} // best_score_gap for this d-gene alignments
 			prob += prob_with_this_d;
-			if ( verbose ) {
+			if ( verbose() ) {
 				cout << "prob_with_this_d: " << prob_with_this_d << ' ' << d_gene << ' ' << prob_d_gene << endl;
 			}
 		}
@@ -1583,11 +1581,10 @@ JunctionCounts::calc_cdr3_nucseq_probability(
 ) const
 {
 	//int const MAX_CDR3_NUCSEQ_LENGTH( 100 );
-	bool const verbose( false ); //TR.Trace.visible());
 	int const max_extra_trim( vdj_probs::max_extra_vj_trim_for_probs );
 	Size const sz_alpha( alphabet_.size() );
 
-	if ( verbose ) {
+	if ( verbose() ) {
 		cout << "calc_cdr3_nucseq_probability: " << cdr3_nucseq << " v_ties: ";
 		foreach_( string v, v_ties ) cout << ' ' << v;
 		cout << " j_ties: ";
@@ -1638,7 +1635,7 @@ JunctionCounts::calc_cdr3_nucseq_probability(
 			degnuc_matches_nuc( cdr3_nucseq[num_aligned], g_cdr3_nucseq[num_aligned] ) ) ++num_aligned;
 		v_min_trims.push_back( g_cdr3_nucseq.size() - num_aligned );
 		v_ndn_starts.push_back( num_aligned );
-		if ( verbose && v_min_trims.back()<max_pnucs_ ) {
+		if ( verbose() && v_min_trims.back()<max_pnucs_ ) {
 			cout << "v_pnucs: ndn_start= " << v_ndn_starts.back() << ' ' << max_pnucs_-v_min_trims.back() << ' ' <<
 				g << endl;
 		}
@@ -1654,7 +1651,7 @@ JunctionCounts::calc_cdr3_nucseq_probability(
 				g_cdr3_nucseq[g_cdr3_nucseq.size()-1-num_aligned] ) ) ++num_aligned;
 		j_min_trims.push_back( g_cdr3_nucseq.size() - num_aligned );
 		j_ndn_stops.push_back( cdr3_nucseq_len-1 - num_aligned );
-		if ( verbose && j_min_trims.back()<max_pnucs_ ) {
+		if ( verbose() && j_min_trims.back()<max_pnucs_ ) {
 			cout << "j_pnucs: ndn_stop= " << j_ndn_stops.back() << ' ' << max_pnucs_-j_min_trims.back() << ' ' <<
 				g << endl;
 		}
@@ -1686,7 +1683,7 @@ JunctionCounts::calc_cdr3_nucseq_probability(
 				}
 			}
 		}
-		if ( verbose ) {
+		if ( verbose() ) {
 			cout << "v_probs_for_ndn_start: " << ndn_start << ' ' <<
 				v_probs_for_this_ndn_start[0] << ' ' <<
 				v_probs_for_this_ndn_start[1] << ' ' <<
@@ -1724,7 +1721,7 @@ JunctionCounts::calc_cdr3_nucseq_probability(
 				}
 			}
 		}
-		if ( verbose ) {
+		if ( verbose() ) {
 			cout << "j_probs_for_ndn_stop: " << ndn_stop << ' ' <<
 				j_probs_for_this_ndn_stop[0] << ' ' <<
 				j_probs_for_this_ndn_stop[1] << ' ' <<
@@ -1756,7 +1753,7 @@ JunctionCounts::calc_cdr3_nucseq_probability(
 				this_ndn_prob = calc_ndn_nucseq_probability_given_j_gene( ndn_nucseq, single_j_gene_for_d_choice,
 					v_probs_for_ndn_start[ ndn_start ], j_probs_for_ndn_stop [ ndn_stop ] );
 			}
-			if ( verbose ) {
+			if ( verbose() ) {
 				cout << "this_ndn_prob: " << ndn_start << ' ' << ndn_stop << " ndn_len: " << ndn_stop-ndn_start+1 <<
 					' ' << this_ndn_prob << endl;
 			}
@@ -1786,7 +1783,7 @@ JunctionCounts::calc_cdr3_protseq_probability(
 	foreach_( string const & cdr3_nucseq, cdr3_nucseqs ) {
 		single_prob = calc_cdr3_nucseq_probability( cdr3_nucseq, v_ties, j_ties );
 		prob += single_prob;
-		if ( false ) { //TR.Trace.visible() ) {
+		if ( verbose() ) {
 			cout << "degenerate_nucseq: " << cdr3_protseq << ' ' << cdr3_nucseq << ' ' << single_prob << ' ' <<
 				prob << endl;
 		}
