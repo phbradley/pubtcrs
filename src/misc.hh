@@ -16,6 +16,7 @@
 namespace misc {
 string dbdir;
 bool verbose_(false);
+bool terse_(false);
 }
 
 inline
@@ -31,6 +32,21 @@ set_verbose(
 )
 {
 	misc::verbose_ = setting;
+}
+
+inline
+bool
+terse()
+{
+	return misc::terse_;
+}
+
+void
+set_terse(
+	bool const setting
+)
+{
+	misc::terse_ = setting;
 }
 
 void
@@ -203,6 +219,9 @@ get_v_family_from_v_gene( string const & g )
 	// runtime_assert( g.substr(0,4) == "TRBV" );
 	Size numlen(0);
 	while ( is_int( g.substr(4,numlen+1) ) )++numlen;
+	if (!numlen) { // for example, TRGVA (which is a pseudogene)
+		return "V00";
+	}
 	runtime_assert( numlen );
 	Size const vno( int_of( g.substr(4,numlen) ) );
 	string const zeropad( vno < 10 ? "0" : "" );
@@ -244,6 +263,22 @@ bool
 has_element( T const & t, vector< T > const & v )
 {
 	return ( find( v.begin(), v.end(), t ) != v.end() );
+}
+
+
+template < class T >
+Size
+vector_index( T const & t, vector< T > const & v )
+{
+	return find( v.begin(), v.end(), t ) - v.end();
+}
+
+
+template < class T >
+Size
+vector_index( vector< T > const & v, T const & t )
+{
+	return find( v.begin(), v.end(), t ) - v.end();
 }
 
 

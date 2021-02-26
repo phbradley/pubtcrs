@@ -42,6 +42,7 @@ template< typename T >
 void
 compute_distances(
 	bool const self_distances,
+	bool const only_nndists, // if TRUE, don't write out the distances
 	strings const & f1_tcrs,
 	vector< T > const & f1_dtcrs,
 	strings const & f2_tcrs,
@@ -52,18 +53,20 @@ compute_distances(
 
 
 	for ( Size ii=0; ii< f1_tcrs.size(); ++ii ) {
-		cout << "dists: " << ii << ' '<< f1_tcrs[ii];
+		if ( !( only_nndists || terse() ) ) cout << "dists: " << ii << ' '<< f1_tcrs[ii];
 		Reals dists;
 		for ( Size jj=0; jj< f2_tcrs.size(); ++jj ) {
 			Real const dist( tcrdist(f1_dtcrs[ii], f2_dtcrs[jj]) );
-			cout << ' ' << dist;
-			dists.push_back( dist ); // could include 0 for ii==jj if self_distances
+			if ( !only_nndists ) cout << ' ' << dist;
+			if ( ii != jj || (!self_distances) ) {
+				dists.push_back( dist ); // could include 0 for ii==jj if self_distances
+			}
 		}
-		cout << '\n';
+		if ( !only_nndists ) cout << '\n';
 
-		if ( !self_distances ) {
-			sort( dists.begin(), dists.end() ); // now in increasing order
+		sort( dists.begin(), dists.end() ); // now in increasing order
 
+		if ( !terse() ) {
 			cout << "NNDIST tcr1_index: " << ii << " tcr1: " << f1_tcrs[ii] <<
 				" mindist_to_file2_tcrs: " << F(9,3,dists.front()) <<
 				" nndistance_10P_wrt_file2_tcrs: " << F(9,3,compute_NNdistance_nosorting( dists )) << endl;
@@ -84,9 +87,17 @@ int main(int argc, char** argv)
 			"first file will be computed with respect to the repertoire of TCR chains in the second file.",
 			' ', "0.1" );
 
+ 		TCLAP::ValueArg<string> chain_arg("c","chain","TCR chain (A or B) in case this can't be determined "
+			"from the tcr strings themselves", false, "X", "string", cmd);
+
 		// path to database files
  		TCLAP::ValueArg<std::string> database_arg("d","database","Path to database directory",false,
 			"./db/","path",cmd);
+
+		TCLAP::SwitchArg terse_arg("t","terse", "terse output", cmd, false);
+
+		TCLAP::SwitchArg only_nndists_arg("n","only_nndists","Don't write out the distances, "
+			"just the NNDIST scores", cmd, false);
 
  		TCLAP::ValueArg<string> tcrs_file2_arg("j","tcrs_file2","File containing the second set of TCRs. If "
 			"not provided will compute file1-vs-file1 matrix of distances.",false,"","string",cmd);
@@ -99,12 +110,13 @@ int main(int argc, char** argv)
 
 		set_dbdir( database_arg.getValue() );
 
+		set_terse( terse_arg.getValue() );
 
 		string const tcrs_file1( tcrs_file1_arg.getValue() );
 		string const tcrs_file2( tcrs_file2_arg.getValue() );
+		bool const only_nndists( only_nndists_arg.getValue() );
 
-		bool const self_distances( tcrs_file2.empty() );
-
+		bool const self_distances( tcrs_file2.empty() || tcrs_file1 == tcrs_file2 );
 
 		strings f1_tcrs, f2_tcrs;
 
@@ -117,16 +129,17 @@ int main(int argc, char** argv)
 
 		// which kind of input do we have? V-family or exact V-gene?
 		bool by_family;
-		char tcr_chain( 'B' ); // the default
+		char tcr_chain( chain_arg.getValue()[0] ); // will be 'X' if not specified
 
 		{ // hacky stuff here
 			string const random_tcr( f1_tcrs[ f1_tcrs.size()/2 ] ); // the first could be a csv header, for example
 			if ( random_tcr[0] == 'V' ) {
 				by_family = true;
+				if ( tcr_chain=='X') tcr_chain='B';
 			} else {
 				by_family = false; // full allele-level gene information
 				runtime_assert( random_tcr.substr(0,2) == "TR" );
-				tcr_chain = random_tcr[2];
+				if (tcr_chain=='X') tcr_chain = random_tcr[2];
 			}
 		} // scope for io checking
 
@@ -154,7 +167,7 @@ int main(int argc, char** argv)
 			foreach_( string tcr, f2_tcrs ) {
 				f2_dtcrs.push_back( tcrdist.create_distance_tcr_f( tcr ) );
 			}
-			compute_distances( self_distances, f1_tcrs, f1_dtcrs, f2_tcrs, f2_dtcrs, tcrdist );
+			compute_distances( self_distances, only_nndists, f1_tcrs, f1_dtcrs, f2_tcrs, f2_dtcrs, tcrdist );
 		} else {
 
 			vector< DistanceTCR_g > f1_dtcrs, f2_dtcrs;
@@ -164,7 +177,7 @@ int main(int argc, char** argv)
 			foreach_( string tcr, f2_tcrs ) {
 				f2_dtcrs.push_back( tcrdist.create_distance_tcr_g( tcr ) );
 			}
-			compute_distances( self_distances, f1_tcrs, f1_dtcrs, f2_tcrs, f2_dtcrs, tcrdist );
+			compute_distances( self_distances, only_nndists, f1_tcrs, f1_dtcrs, f2_tcrs, f2_dtcrs, tcrdist );
 		}
 
 	} catch (TCLAP::ArgException &e)  // catch any exceptions
